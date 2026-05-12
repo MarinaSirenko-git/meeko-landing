@@ -1,0 +1,14 @@
+<svg
+  class="decor-lines"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 25.903 23.394"
+  fill="none"
+  aria-hidden="true"
+>
+  <path
+    d="M 23.322 21.175 C 19.519 21.955 13.929 24.092 7.212 23.166 M 25.903 0 C 22.03 4.277 12.263 13.543 4.186 16.39 M 0 12.037 C 1.477 9.069 4.994 2.709 7.25 1.007"
+    stroke="currentColor"
+    stroke-linecap="round"
+    stroke-miterlimit="10"
+  />
+</svg>

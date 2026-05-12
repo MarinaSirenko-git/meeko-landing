@@ -1,0 +1,17 @@
+<svg
+  class="decor-lightning"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 24 24"
+  fill="none"
+  aria-hidden="true"
+>
+  <path
+    d="M 12.666 7.005 C 11.265 6.823 9.892 6.58 8.473 6.495 C 8.8 5.872 10.603 1.529 11.193 0.001 C 9.907 -0.002 8.619 0.001 7.338 0.124 C 6.358 0.218 5.402 0.467 4.412 0.464 C 2.682 3.586 0.842 7.075 0 10.584 C 1.4 10.707 2.791 10.582 4.186 10.451 C 3.674 13.167 2.52 16.258 2.236 19 C 3.766 18.018 11.426 9.2 12.666 7.005 Z"
+    fill="var(--icon-fill, #ffe7a9)"
+    stroke="currentColor"
+    stroke-width="0.9"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    transform="translate(6 3)"
+  />
+</svg>

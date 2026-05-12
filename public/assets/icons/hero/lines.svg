@@ -1,0 +1,14 @@
+<svg
+  class="decor-strokes"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 16.277 21.964"
+  fill="none"
+  aria-hidden="true"
+>
+  <path
+    d="M 10.834 0 C 7.532 8.556 2.236 13.645 0 15.12 M 16.277 1.068 C 12.691 13.232 5.901 20.067 2.955 21.964"
+    stroke="currentColor"
+    stroke-linecap="round"
+    stroke-miterlimit="10"
+  />
+</svg>

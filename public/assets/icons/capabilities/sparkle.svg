@@ -1,0 +1,15 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 24 24"
+  fill="none"
+>
+  <path
+    d="M 10.065 20.993 C 10.085 17.541 8.356 14.143 4.705 12.157 C 3.291 11.388 1.632 11.137 0 10.935 C 6.6 10.575 8.744 4.602 9.547 0 C 9.332 4.114 11.954 8.486 17.093 8.766 C 12.053 11.465 10.419 16.224 10.065 20.993 Z"
+    fill="var(--icon-fill, #ffe7a9)"
+    stroke="currentColor"
+    stroke-width="0.9"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    transform="translate(3 2)"
+  />
+</svg>

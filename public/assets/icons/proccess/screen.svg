@@ -1,0 +1,64 @@
+<svg
+  class="icon-screen"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 48 48"
+  fill="none"
+  aria-hidden="true"
+>
+  <g transform="translate(4 6)">
+    <path
+      d="M 0 2.164 C 0 0.969 0.943 0 2.105 0 L 37.895 0 C 39.057 0 40 0.969 40 2.164 L 40 28.129 C 40 29.324 39.057 30.292 37.895 30.292 L 2.105 30.292 C 0.943 30.292 0 29.324 0 28.129 Z"
+      fill="transparent"
+      stroke="currentColor"
+      stroke-width="1"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+
+    <path
+      d="M 0 2.164 C 0 0.969 0.943 0 2.105 0 L 37.895 0 C 39.057 0 40 0.969 40 2.164 L 40 8.655 C 40 9.85 39.057 10.819 37.895 10.819 L 2.105 10.819 C 0.943 10.819 0 9.85 0 8.655 Z"
+      fill="var(--icon-fill, #fbebea)"
+      stroke="currentColor"
+      stroke-width="1"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      transform="translate(0 19.474)"
+    />
+
+    <path
+      d="M 4.211 0 L 0 5.409"
+      fill="transparent"
+      stroke="currentColor"
+      stroke-width="1"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      transform="translate(13.684 6.491)"
+    />
+
+    <path
+      d="M 3.158 0 L 0 4.327"
+      fill="transparent"
+      stroke="currentColor"
+      stroke-width="1"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      transform="translate(21.053 8.655)"
+    />
+
+    <path
+      d="M 2.105 4.327 C 3.268 4.327 4.211 3.359 4.211 2.164 C 4.211 0.969 3.268 0 2.105 0 C 0.943 0 0 0.969 0 2.164 C 0 3.359 0.943 4.327 2.105 4.327 Z"
+      fill="currentColor"
+      transform="translate(17.895 22.719)"
+    />
+
+    <path
+      d="M 3.158 0 L 0 8.655 L 21.053 8.655 L 17.895 0"
+      fill="transparent"
+      stroke="currentColor"
+      stroke-width="1"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      transform="translate(9.474 30.292)"
+    />
+  </g>
+</svg>

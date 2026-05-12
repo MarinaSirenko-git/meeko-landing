@@ -1,0 +1,18 @@
+<svg
+  class="decor-star decor-star--soft"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 24 24"
+  fill="none"
+  aria-hidden="true"
+>
+  <path
+    d="M 9.377 0.015 C 9.032 -0.329 6.869 6.47 6.869 6.47 C 6.869 6.47 0.565 5.976 0.039 6.988 C -0.522 8.066 5.205 11.662 5.205 11.662 C 5.205 11.662 2.872 18.542 3.6 18.944 C 4.695 19.546 9.377 15.106 9.377 15.106 C 9.377 15.106 14.335 19.328 15.154 18.944 C 15.572 18.744 13.348 11.871 13.348 11.871 C 13.348 11.871 18.8 8.418 18.465 7.515 C 18.156 6.67 11.877 6.787 11.877 6.787 C 11.877 6.787 10.637 0.494 9.5 0 Z"
+    fill="var(--icon-fill, #ffe7a9)"
+    stroke="currentColor"
+    stroke-width="0.9"
+    stroke-linecap="butt"
+    stroke-linejoin="miter"
+    stroke-miterlimit="10"
+    transform="translate(3 2)"
+  />
+</svg>

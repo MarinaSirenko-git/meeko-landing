@@ -1,0 +1,95 @@
+<svg
+  class="icon-idea-hand"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 48 48"
+  fill="none"
+  aria-hidden="true"
+>
+  <g transform="translate(4.009 4)">
+    <path
+      d="M 24.358 4.96 L 19.991 4.96 L 10.991 0 L 0 4.042 L 3.002 9.986 L 10.075 7.033 C 16.691 10.985 20.718 12.96 22.156 12.96 C 23.594 12.96 29.539 10.294 39.991 4.96"
+      fill="transparent"
+      stroke="currentColor"
+      stroke-width="1"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      transform="translate(0 27.04)"
+    />
+
+    <path
+      d="M 11.992 21.988 C 11.992 19.097 11.992 17.54 11.992 17.317 C 13.092 16.861 14.535 16.193 15.364 15.364 C 16.993 13.735 18 11.485 18 9 C 18 4.029 13.971 0 9 0 C 4.029 0 0 4.029 0 9 C 0 11.485 1.007 13.735 2.636 15.364 C 3.465 16.193 4.9 16.861 6 17.317 C 6.006 17.652 6.006 19.209 6 21.988 Z"
+      fill="var(--icon-fill, #fbebea)"
+      stroke="currentColor"
+      stroke-width="1"
+      stroke-linecap="butt"
+      stroke-linejoin="round"
+      transform="translate(12.991 1)"
+    />
+
+    <path
+      d="M 0 1 L 1 0"
+      fill="transparent"
+      stroke="currentColor"
+      stroke-width="1"
+      stroke-linecap="round"
+      stroke-linejoin="miter"
+      stroke-miterlimit="10"
+      transform="translate(7.991 16)"
+    />
+
+    <path
+      d="M 1 1 L 0 0"
+      fill="transparent"
+      stroke="currentColor"
+      stroke-width="1"
+      stroke-linecap="round"
+      stroke-linejoin="miter"
+      stroke-miterlimit="10"
+      transform="translate(34.991 16)"
+    />
+
+    <path
+      d="M 1 1 L 0 0"
+      fill="transparent"
+      stroke="currentColor"
+      stroke-width="1"
+      stroke-linecap="round"
+      stroke-linejoin="miter"
+      stroke-miterlimit="10"
+      transform="translate(9.991 0)"
+    />
+
+    <path
+      d="M 0 1 L 1 0"
+      fill="transparent"
+      stroke="currentColor"
+      stroke-width="1"
+      stroke-linecap="round"
+      stroke-linejoin="miter"
+      stroke-miterlimit="10"
+      transform="translate(32.991 0)"
+    />
+
+    <path
+      d="M 1 0 L 0 0"
+      fill="transparent"
+      stroke="currentColor"
+      stroke-width="1"
+      stroke-linecap="round"
+      stroke-linejoin="miter"
+      stroke-miterlimit="10"
+      transform="translate(35.991 8)"
+    />
+
+    <path
+      d="M 1 0 L 0 0"
+      fill="transparent"
+      stroke="currentColor"
+      stroke-width="1"
+      stroke-linecap="round"
+      stroke-linejoin="miter"
+      stroke-miterlimit="10"
+      transform="translate(6.991 8)"
+    />
+  </g>
+</svg>
