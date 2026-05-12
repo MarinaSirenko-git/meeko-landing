@@ -1,13 +1,26 @@
 :root {
-  --color-bg: #ffffff;
-  --color-text: #111111;
-  --color-muted: #5c5c5c;
-  --font-sans: system-ui, sans-serif;
-  --space-1: 0.25rem;
-  --space-2: 0.5rem;
-  --space-3: 1rem;
-  --space-4: 1.5rem;
-  --space-5: 2rem;
-  --radius: 0.5rem;
-  --content-max: 72rem;
+  /* Design palette */
+  --palette-0: #1d1d1d;
+  --palette-1: #fff;
+  --palette-2: #f7f7f7;
+  --palette-3: #e3e3ff;
+  --palette-4: #e3f2ff;
+  --palette-5: #ffe3fb;
+  --palette-6: #ffe7a9;
+  --palette-7: #d1e8fd;
+  --palette-8: #dbf5f0;
+  --palette-9: #e9fac0;
+  --palette-10: #fbebea;
+
+  /* Fonts */
+  --font-fallback: Helvetica, Arial, sans-serif;
+  --font-sans: "Uncut Sans", var(--font-fallback);
+  --font-urbanist: "Urbanist", var(--font-fallback);
+  --font-inter: "Inter", var(--font-fallback);
+  --font-inter-display: "Inter Display", var(--font-fallback);
+  --font-caveat: "Caveat", var(--font-fallback);
+
+  /* Layout */
+  --content-max: 1200px;
+  --space-4: 16px;
 }
