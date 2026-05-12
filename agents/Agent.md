@@ -4,7 +4,7 @@ Guidance for anyone (human or assistant) working on this repo.
 
 ## Project
 
-Static landing page: `index.html`, CSS under `css/` (entry: `styles.css`), scripts under `js/`, media under `assets/`.
+Vite-powered vanilla JS landing: `index.html`, CSS under `css/` (entry: `styles.css`), scripts under `js/`, static media under `public/assets/`.
 
 ## Conventions
 
@@ -18,4 +18,5 @@ Static landing page: `index.html`, CSS under `css/` (entry: `styles.css`), scrip
 |------|---------|
 | `index.html` | Main page |
 | `css/styles.css` | Imports the rest of the stylesheets |
-| `js/main.js` | Script entry |
+| `js/main.js` | Vite script entry (ES modules, GSAP) |
+| `vite.config.js` | Vite config |
