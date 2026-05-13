@@ -3,12 +3,160 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Meeko — creative studio landing: services, work, about, and contact."
+    />
     <title>Meeko</title>
     <link rel="stylesheet" href="/css/styles.css" />
   </head>
   <body>
-    <main class="layout">
-      <p>Landing page starter — replace this content.</p>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="header layout">
+      <div class="header__inner">
+        <a class="header__logo" href="/">Meeko</a>
+
+        <nav class="header__nav" aria-label="Main navigation">
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <a
+                class="header__nav-link"
+                href="#services"
+                aria-label="Services"
+              >
+                <span class="header__nav-link-roll" aria-hidden="true">
+                  <span class="header__nav-link-track">
+                    <span class="header__nav-link-text">Services</span>
+                    <span class="header__nav-link-text">Services</span>
+                  </span>
+                </span>
+              </a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#work" aria-label="Work">
+                <span class="header__nav-link-roll" aria-hidden="true">
+                  <span class="header__nav-link-track">
+                    <span class="header__nav-link-text">Work</span>
+                    <span class="header__nav-link-text">Work</span>
+                  </span>
+                </span>
+              </a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#about" aria-label="About">
+                <span class="header__nav-link-roll" aria-hidden="true">
+                  <span class="header__nav-link-track">
+                    <span class="header__nav-link-text">About</span>
+                    <span class="header__nav-link-text">About</span>
+                  </span>
+                </span>
+              </a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#contact" aria-label="Contact">
+                <span class="header__nav-link-roll" aria-hidden="true">
+                  <span class="header__nav-link-track">
+                    <span class="header__nav-link-text">Contact</span>
+                    <span class="header__nav-link-text">Contact</span>
+                  </span>
+                </span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <nav class="header__social" aria-label="Social links">
+          <ul class="header__social-list">
+            <li class="header__social-item">
+              <a class="header__social-link" href="#" aria-label="X">
+                <img
+                  class="header__social-icon"
+                  src="/assets/icons/nav/x.svg"
+                  width="24"
+                  height="24"
+                  alt=""
+                />
+              </a>
+            </li>
+            <li class="header__social-item">
+              <a class="header__social-link" href="#" aria-label="Dribbble">
+                <img
+                  class="header__social-icon"
+                  src="/assets/icons/nav/dribbble.svg"
+                  width="24"
+                  height="24"
+                  alt=""
+                />
+              </a>
+            </li>
+            <li class="header__social-item">
+              <a class="header__social-link" href="#" aria-label="Instagram">
+                <img
+                  class="header__social-icon"
+                  src="/assets/icons/nav/insta.svg"
+                  width="24"
+                  height="24"
+                  alt=""
+                />
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <button
+          type="button"
+          class="header__menu-toggle"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+          aria-label="Menu"
+        >
+          <span class="header__menu-toggle-icon" aria-hidden="true">
+            <span class="header__menu-toggle-line header__menu-toggle-line--top"></span>
+            <span class="header__menu-toggle-line header__menu-toggle-line--bottom"></span>
+          </span>
+        </button>
+      </div>
+    </header>
+
+    <div
+      class="mobile-menu__overlay"
+      id="mobile-menu-overlay"
+      hidden
+      aria-hidden="true"
+    ></div>
+
+    <div class="mobile-menu layout" id="mobile-menu" hidden>
+      <nav class="mobile-menu__nav" aria-label="Mobile navigation">
+        <ul class="mobile-menu__list">
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link" href="#services">Services</a>
+          </li>
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link" href="#work">Work</a>
+          </li>
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link" href="#about">About</a>
+          </li>
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <main class="layout" id="main-content">
+      <section id="services" class="mock-section mock-section--services">
+        <h2 class="mock-section__title"></h2>
+      </section>
+      <section id="work" class="mock-section mock-section--work">
+        <h2 class="mock-section__title"></h2>
+      </section>
+      <section id="about" class="mock-section mock-section--about">
+        <h2 class="mock-section__title"></h2>
+      </section>
+      <section id="contact" class="mock-section mock-section--contact">
+        <h2 class="mock-section__title">Contact</h2>
+      </section>
     </main>
     <script type="module" src="/js/main.js"></script>
   </body>

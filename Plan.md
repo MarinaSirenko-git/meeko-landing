@@ -81,13 +81,35 @@ console.table(
 
 - header
 
-разметка: 
-бем-классы:
-планшет:
-мобильный вид:
-анимация:
-js:
-ассеты:
+разметка: header > a, nav > ul li a * 4, ul > li > a > img * 3
+бем-классы: header header__logo header__nav header__nav-list header__nav-item header__nav-link header__social-list header__social-item header__social-link
+планшет: header > a, button
+мобильный вид: header > a, button
+анимация: плавный скролл к секциям
+js: -
+ассеты: from public/assets/icons/nav
+мобильное меню:
+<div class="mobile-menu" id="mobile-menu" hidden>
+  <nav class="mobile-menu__nav" aria-label="Mobile navigation">
+    <ul class="mobile-menu__list">
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#services">Services</a>
+      </li>
+
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#work">Work</a>
+      </li>
+
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#about">About</a>
+      </li>
+
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#contact">Contact</a>
+      </li>
+    </ul>
+  </nav>
+</div>
 
 - hero
 

@@ -1,7 +1,48 @@
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 body {
   font-family: var(--font-sans);
   background-color: var(--color-bg);
   color: var(--color-text);
+}
+
+.skip-link {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 200;
+  padding: 0.75rem 1.25rem;
+  margin: var(--space-4);
+  border-radius: 10px;
+  border: var(--border-1);
+  background-color: var(--palette-1);
+  color: var(--main-text);
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  text-decoration: none;
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.skip-link:focus {
+  clip-path: none;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  outline: 2px solid var(--main-text);
+  outline-offset: 2px;
 }
 
 a {

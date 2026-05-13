@@ -1,6 +1,6 @@
 :root {
   /* Design palette */
-  --palette-0: #1d1d1d;
+  --main-text: #1d1d1d;
   --palette-1: #fff;
   --palette-2: #f7f7f7;
   --palette-3: #e3e3ff;
@@ -23,4 +23,7 @@
   /* Layout */
   --content-max: 1200px;
   --space-4: 16px;
+
+  /* Borders */
+  --border-1: 1px solid var(--main-text);
 }
