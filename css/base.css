@@ -1,5 +1,12 @@
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 140px;
+}
+
+@media (max-width: 1298.98px) {
+  html {
+    scroll-padding-top: 120px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -10,7 +17,7 @@ html {
 
 body {
   font-family: var(--font-sans);
-  background-color: var(--color-bg);
+  background-color: var(--primary);
   color: var(--color-text);
 }
 
@@ -47,4 +54,10 @@ body {
 
 a {
   color: inherit;
+}
+
+@media (max-width: 809px) {
+  .hide-mobile-element {
+    display: none;
+  }
 }

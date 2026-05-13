@@ -1,14 +1,13 @@
 :root {
   /* Design palette */
   --main-text: #1d1d1d;
-  --palette-1: #fff;
   --palette-2: #f7f7f7;
-  --palette-3: #e3e3ff;
-  --palette-4: #e3f2ff;
-  --palette-5: #ffe3fb;
-  --palette-6: #ffe7a9;
+  --primary: #e3e3ff;
+  --accent-blue: #e3f2ff;
+  --accent-pink: #ffe3fb;
+  --accent-yellow: #ffe7a9;
   --palette-7: #d1e8fd;
-  --palette-8: #dbf5f0;
+  --accent-green: #dbf5f0;
   --palette-9: #e9fac0;
   --palette-10: #fbebea;
 
@@ -22,7 +21,7 @@
 
   /* Layout */
   --content-max: 1200px;
-  --space-4: 16px;
+  --space-4: 30px;
 
   /* Borders */
   --border-1: 1px solid var(--main-text);

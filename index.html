@@ -8,6 +8,16 @@
       content="Meeko — creative studio landing: services, work, about, and contact."
     />
     <title>Meeko</title>
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+    <link
+      rel="preload"
+      href="/assets/fonts/UncutSans-Variable.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
     <link rel="stylesheet" href="/css/styles.css" />
   </head>
   <body>
@@ -21,23 +31,23 @@
             <li class="header__nav-item">
               <a
                 class="header__nav-link"
-                href="#services"
+                href="#blog"
                 aria-label="Services"
               >
                 <span class="header__nav-link-roll" aria-hidden="true">
                   <span class="header__nav-link-track">
-                    <span class="header__nav-link-text">Services</span>
-                    <span class="header__nav-link-text">Services</span>
+                    <span class="header__nav-link-text">Blog</span>
+                    <span class="header__nav-link-text">Blog</span>
                   </span>
                 </span>
               </a>
             </li>
             <li class="header__nav-item">
-              <a class="header__nav-link" href="#work" aria-label="Work">
+              <a class="header__nav-link" href="#works" aria-label="Work">
                 <span class="header__nav-link-roll" aria-hidden="true">
                   <span class="header__nav-link-track">
-                    <span class="header__nav-link-text">Work</span>
-                    <span class="header__nav-link-text">Work</span>
+                    <span class="header__nav-link-text">Works</span>
+                    <span class="header__nav-link-text">Works</span>
                   </span>
                 </span>
               </a>
@@ -53,7 +63,7 @@
               </a>
             </li>
             <li class="header__nav-item">
-              <a class="header__nav-link" href="#contact" aria-label="Contact">
+              <a class="header__nav-link" href="#footer" aria-label="Contact">
                 <span class="header__nav-link-roll" aria-hidden="true">
                   <span class="header__nav-link-track">
                     <span class="header__nav-link-text">Contact</span>
@@ -129,34 +139,205 @@
       <nav class="mobile-menu__nav" aria-label="Mobile navigation">
         <ul class="mobile-menu__list">
           <li class="mobile-menu__item">
-            <a class="mobile-menu__link" href="#services">Services</a>
+            <a class="mobile-menu__link" href="#blog">Blog</a>
           </li>
           <li class="mobile-menu__item">
-            <a class="mobile-menu__link" href="#work">Work</a>
+            <a class="mobile-menu__link" href="#works">Works</a>
           </li>
           <li class="mobile-menu__item">
             <a class="mobile-menu__link" href="#about">About</a>
           </li>
           <li class="mobile-menu__item">
-            <a class="mobile-menu__link" href="#contact">Contact</a>
+            <a class="mobile-menu__link" href="#footer">Contact</a>
           </li>
         </ul>
       </nav>
     </div>
 
-    <main class="layout" id="main-content">
-      <section id="services" class="mock-section mock-section--services">
+    <main id="main-content">
+      <section
+        class="hero"
+        id="hero"
+        aria-labelledby="hero-title"
+      >
+        <div class="hero__container layout">
+          <div class="hero__decorations" aria-hidden="true">
+            <div class="hero__decoration hero__decoration--web">
+              <span class="hero__decoration-label">Web Development</span>
+            </div>
+            <div class="hero__decoration hero__decoration--pen">
+              <img
+                class="hero__decoration-icon hero__decoration-icon--pen"
+                src="/assets/icons/hero/pen.svg"
+                alt=""
+              />
+            </div>
+            <div class="hero__decoration hero__decoration--drink">
+              <img
+                class="hero__decoration-icon hero__decoration-icon--drink"
+                src="/assets/icons/hero/glass.svg"
+                alt=""
+              />
+            </div>
+            <div class="hero__decoration hero__decoration--no-code">
+              <span class="hero__decoration-label">No-code Design</span>
+            </div>
+          </div>
+
+          <div class="hero__content">
+            <h1 class="hero__title" id="hero-title">
+              <span
+                class="hero__title-part hero__title-part--hello hide-mobile-element"
+              >
+                Hello!
+              </span>
+              <span class="hero__frame" aria-hidden="true">
+                <picture class="hero__frame-picture hero__frame-picture--one">
+                  <source
+                    srcset="/assets/images/hero/pos-1.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    class="hero__frame-image"
+                    src="/assets/images/hero/pos-1.jpg"
+                    width="105"
+                    height="105"
+                    alt=""
+                    decoding="async"
+                  />
+                </picture>
+                <picture class="hero__frame-picture hero__frame-picture--two">
+                  <source
+                    srcset="/assets/images/hero/pos-2.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    class="hero__frame-image"
+                    src="/assets/images/hero/pos-2.jpg"
+                    width="105"
+                    height="105"
+                    alt=""
+                    decoding="async"
+                  />
+                </picture>
+                <picture class="hero__frame-picture hero__frame-picture--three">
+                  <source
+                    srcset="/assets/images/hero/pos-3.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    class="hero__frame-image"
+                    src="/assets/images/hero/pos-3.jpg"
+                    width="105"
+                    height="105"
+                    alt=""
+                    decoding="async"
+                  />
+                </picture>
+              </span>
+              <span class="hero__title-part hero__title-part--intro">
+                I'm Meeko,
+              </span>
+              <span class="hero__title-part hero__title-part--role">
+                a product designer.
+              </span>
+            </h1>
+            <p class="hero__description">
+              I specialize in
+              <strong>HTML</strong>, <strong>CSS</strong>,
+              <strong>WordPress</strong>, and <strong>Framer</strong>, with a
+              strong track record of converting designs into responsive
+              websites.
+            </p>
+          </div>
+        </div>
+
+        <nav class="hero__cards layout" aria-label="Featured pages">
+          <a class="hero-card" href="#works">
+            <img
+              class="hero-card__icon"
+              src="/assets/icons/hero/browser-globe.svg"
+              width="92"
+              height="68"
+              alt=""
+              decoding="async"
+            />
+            <span class="hero-card__content">
+              <span class="hero-card__title">My Portfolio</span>
+              <span class="hero-card__description">
+                Explore selected projects and my approach to design.
+              </span>
+            </span>
+            <span
+              class="hero-card__action hero-card__action--portfolio"
+              aria-hidden="true"
+            >
+              →
+            </span>
+          </a>
+          <a class="hero-card" href="#about">
+            <img
+              class="hero-card__icon"
+              src="/assets/icons/hero/about.svg"
+              width="92"
+              height="68"
+              alt=""
+              decoding="async"
+            />
+            <span class="hero-card__content">
+              <span class="hero-card__title">About Me</span>
+              <span class="hero-card__description">
+                A closer look at my background, skills, and creative journey.
+              </span>
+            </span>
+            <span
+              class="hero-card__action hero-card__action--about"
+              aria-hidden="true"
+            >
+              →
+            </span>
+          </a>
+          <a class="hero-card" href="#footer">
+            <img
+              class="hero-card__icon"
+              src="assets/icons/hero/contact.svg"
+              width="92"
+              height="68"
+              alt=""
+              decoding="async"
+            />
+            <span class="hero-card__content">
+              <span class="hero-card__title">Contact Me</span>
+              <span class="hero-card__description">
+                Let's work together to bring your ideas and vision to life.
+              </span>
+            </span>
+            <span
+              class="hero-card__action hero-card__action--contact"
+              aria-hidden="true"
+            >
+              →
+            </span>
+          </a>
+        </nav>
+      </section>
+
+      <section id="works" class="mock-section">
         <h2 class="mock-section__title"></h2>
       </section>
-      <section id="work" class="mock-section mock-section--work">
+      <section id="testimonials" class="mock-section">
         <h2 class="mock-section__title"></h2>
       </section>
-      <section id="about" class="mock-section mock-section--about">
+      <section id="proccess" class="mock-section">
         <h2 class="mock-section__title"></h2>
       </section>
-      <section id="contact" class="mock-section mock-section--contact">
-        <h2 class="mock-section__title">Contact</h2>
+      <section id="about" class="mock-section">
+        <h2 class="mock-section__title"></h2>
       </section>
+      <section id="blog" class="mock-section">
+        <h2 class="mock-section__title"></h2>
+      </section>
+      <footer class="footer" id="footer"></footer>
     </main>
     <script type="module" src="/js/main.js"></script>
   </body>
