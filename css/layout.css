@@ -1,10 +1,10 @@
 .layout {
-  width: min(100% - var(--space-4), var(--content-max));
+  width: min(100% - var(--space-4) * 2, var(--content-max));
   margin-inline: auto;
 }
 
 @media (max-width: 1299px) {
   .layout {
-    width: min(100% - var(--space-4), 810px);
+    width: min(100% - var(--space-4) * 2, 810px);
   }
 }

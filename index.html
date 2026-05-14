@@ -30,44 +30,44 @@
           <ul class="header__nav-list">
             <li class="header__nav-item">
               <a
-                class="header__nav-link"
+                class="header__nav-link roll-link"
                 href="#blog"
                 aria-label="Services"
               >
-                <span class="header__nav-link-roll" aria-hidden="true">
-                  <span class="header__nav-link-track">
-                    <span class="header__nav-link-text">Blog</span>
-                    <span class="header__nav-link-text">Blog</span>
+                <span class="roll-link__mask" aria-hidden="true">
+                  <span class="roll-link__track">
+                    <span class="roll-link__text">Blog</span>
+                    <span class="roll-link__text">Blog</span>
                   </span>
                 </span>
               </a>
             </li>
             <li class="header__nav-item">
-              <a class="header__nav-link" href="#works" aria-label="Work">
-                <span class="header__nav-link-roll" aria-hidden="true">
-                  <span class="header__nav-link-track">
-                    <span class="header__nav-link-text">Works</span>
-                    <span class="header__nav-link-text">Works</span>
+              <a class="header__nav-link roll-link" href="#works" aria-label="Work">
+                <span class="roll-link__mask" aria-hidden="true">
+                  <span class="roll-link__track">
+                    <span class="roll-link__text">Works</span>
+                    <span class="roll-link__text">Works</span>
                   </span>
                 </span>
               </a>
             </li>
             <li class="header__nav-item">
-              <a class="header__nav-link" href="#about" aria-label="About">
-                <span class="header__nav-link-roll" aria-hidden="true">
-                  <span class="header__nav-link-track">
-                    <span class="header__nav-link-text">About</span>
-                    <span class="header__nav-link-text">About</span>
+              <a class="header__nav-link roll-link" href="#about" aria-label="About">
+                <span class="roll-link__mask" aria-hidden="true">
+                  <span class="roll-link__track">
+                    <span class="roll-link__text">About</span>
+                    <span class="roll-link__text">About</span>
                   </span>
                 </span>
               </a>
             </li>
             <li class="header__nav-item">
-              <a class="header__nav-link" href="#footer" aria-label="Contact">
-                <span class="header__nav-link-roll" aria-hidden="true">
-                  <span class="header__nav-link-track">
-                    <span class="header__nav-link-text">Contact</span>
-                    <span class="header__nav-link-text">Contact</span>
+              <a class="header__nav-link roll-link" href="#footer" aria-label="Contact">
+                <span class="roll-link__mask" aria-hidden="true">
+                  <span class="roll-link__track">
+                    <span class="roll-link__text">Contact</span>
+                    <span class="roll-link__text">Contact</span>
                   </span>
                 </span>
               </a>
@@ -322,8 +322,189 @@
         </nav>
       </section>
 
-      <section id="works" class="mock-section">
-        <h2 class="mock-section__title"></h2>
+      <section class="works" id="works" aria-labelledby="works-title">
+        <div class="works__container layout">
+          <div class="works__header">
+            <h2 class="works__title" id="works-title">My selected works</h2>
+            <p class="works__description">
+              With my keen eye for detail and sharp critical thinking skills, I
+              specialize in crafting captivating
+              <strong>websites</strong>, <strong>products</strong>, and
+              <strong>experiences</strong>.
+            </p>
+          </div>
+          <div class="works__wrapper">
+            <div class="works__stack">
+              <article class="works-card">
+              <div class="works-card__content">
+                <p class="works-card__eyebrow">Brand design, Framer</p>
+                <h3 class="works-card__title">The Big Shake</h3>
+                <p class="works-card__description">
+                  Built around clarity and consistency, this work defines a
+                  refined visual identity shaped by modern aesthetics and cohesive
+                  brand expression throughout.
+                </p>
+                <a
+                  class="works-card__link roll-link"
+                  href="#contact"
+                  aria-label="View Project"
+                >
+                  <span class="roll-link__mask" aria-hidden="true">
+                    <span class="roll-link__track">
+                      <span class="roll-link__text">View Project</span>
+                      <span class="roll-link__text">View Project</span>
+                    </span>
+                  </span>
+                </a>
+              </div>
+
+              <div class="works-card__media">
+                <picture class="works-card__picture">
+                  <source
+                    srcset="/assets/images/works/big_snake.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    class="works-card__image"
+                    src="/assets/images/works/big_snake.jpg"
+                    width="1200"
+                    height="880"
+                    alt="Preview of The Big Shake project"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
+              </div>
+              </article>
+
+              <article class="works-card">
+              <div class="works-card__content">
+                <p class="works-card__eyebrow">Web design, Typography</p>
+                <h3 class="works-card__title">Transparent Things</h3>
+                <p class="works-card__description">
+                  With an emphasis on precision and structure, this work brings
+                  clarity and modern aesthetics together within a consistent
+                  visual system framework.
+                </p>
+                <a
+                  class="works-card__link roll-link"
+                  href="#contact"
+                  aria-label="View Project"
+                >
+                  <span class="roll-link__mask" aria-hidden="true">
+                    <span class="roll-link__track">
+                      <span class="roll-link__text">View Project</span>
+                      <span class="roll-link__text">View Project</span>
+                    </span>
+                  </span>
+                </a>
+              </div>
+
+              <div class="works-card__media">
+                <picture class="works-card__picture">
+                  <source
+                    srcset="/assets/images/works/transparent_things.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    class="works-card__image"
+                    src="/assets/images/works/transparent_things.jpg"
+                    width="1200"
+                    height="880"
+                    alt="Preview of Transparent Things project"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
+              </div>
+              </article>
+
+              <article class="works-card">
+              <div class="works-card__content">
+                <p class="works-card__eyebrow">Logo design, WordPress</p>
+                <h3 class="works-card__title">Phantom Limb</h3>
+                <p class="works-card__description">
+                  By combining clarity with contemporary design thinking, the
+                  project delivers a considered visual identity with strong and
+                  consistent brand alignment.
+                </p>
+                <a
+                  class="works-card__link roll-link"
+                  href="#contact"
+                  aria-label="View Project"
+                >
+                  <span class="roll-link__mask" aria-hidden="true">
+                    <span class="roll-link__track">
+                      <span class="roll-link__text">View Project</span>
+                      <span class="roll-link__text">View Project</span>
+                    </span>
+                  </span>
+                </a>
+              </div>
+
+              <div class="works-card__media">
+                <picture class="works-card__picture">
+                  <source
+                    srcset="/assets/images/works/phantom_limb.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    class="works-card__image"
+                    src="/assets/images/works/phantom_limb.jpg"
+                    width="1200"
+                    height="880"
+                    alt="Preview of Phantom Limb project"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
+              </div>
+              </article>
+
+              <article class="works-card">
+              <div class="works-card__content">
+                <p class="works-card__eyebrow">Webflow, UX design</p>
+                <h3 class="works-card__title">Heat Lightning</h3>
+                <p class="works-card__description">
+                  This project is driven by a refined design approach that
+                  balances clarity and intention with contemporary visuals and
+                  overall cohesive brand harmony.
+                </p>
+                <a
+                  class="works-card__link roll-link"
+                  href="#contact"
+                  aria-label="View Project"
+                >
+                  <span class="roll-link__mask" aria-hidden="true">
+                    <span class="roll-link__track">
+                      <span class="roll-link__text">View Project</span>
+                      <span class="roll-link__text">View Project</span>
+                    </span>
+                  </span>
+                </a>
+              </div>
+
+              <div class="works-card__media">
+                <picture class="works-card__picture">
+                  <source
+                    srcset="/assets/images/works/heat_lightning.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    class="works-card__image"
+                    src="/assets/images/works/heat_lightning.jpg"
+                    width="1200"
+                    height="880"
+                    alt="Preview of Heat Lightning project"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
+              </div>
+              </article>
+            </div>
+          </div>
+        </div>
       </section>
       <section id="testimonials" class="mock-section">
         <h2 class="mock-section__title"></h2>
