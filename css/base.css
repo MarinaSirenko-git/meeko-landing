@@ -1,6 +1,7 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 140px;
+  background-color: var(--main-text);
 }
 
 @media (max-width: 1298.98px) {
@@ -17,8 +18,19 @@ html {
 
 body {
   font-family: var(--font-sans);
+  color: var(--main-text);
+  position: relative;
+  margin: 0;
+  min-height: 100%;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
   background-color: var(--primary);
-  color: var(--color-text);
+  height: 100px;
 }
 
 .skip-link {

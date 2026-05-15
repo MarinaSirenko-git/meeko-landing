@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="240" viewBox="0 0 240 240">
+  <circle cx="120" cy="120" r="110" fill="#fdf3d4" stroke="#1d1d1d" stroke-width="2.75" />
+  <defs>
+    <path
+      id="footerBadgeArc"
+      fill="none"
+      d="M120 52a67.5 67.5 0 1 1-.01 0"
+    />
+  </defs>
+  <text fill="#1d1d1d" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" letter-spacing="0.14em">
+    <textPath href="#footerBadgeArc" startOffset="50%" text-anchor="middle">
+      I AM AVAILABLE — FOR FREELANCE —
+    </textPath>
+  </text>
+  <g transform="translate(118 132) translate(-48 -24)" stroke="#1d1d1d" stroke-width="1.25" stroke-linejoin="round" fill="white">
+    <rect x="0" y="0" width="96" height="64" rx="6" stroke-width="1.5" />
+    <path d="M0 14 L48 48 L96 14" stroke-width="1.35" stroke-linecap="round" />
+  </g>
+</svg>
