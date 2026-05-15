@@ -1,15 +1,14 @@
 :root {
   /* Design palette */
   --main-text: #1d1d1d;
-  --palette-2: #f7f7f7;
   --primary: #e3e3ff;
   --accent-blue: #e3f2ff;
   --accent-pink: #ffe3fb;
   --accent-yellow: #ffe7a9;
-  --palette-7: #d1e8fd;
+  --accent-sky: #d1e8fd;
   --accent-green: #dbf5f0;
-  --palette-9: #e9fac0;
-  --palette-10: #fbebea;
+  --accent-grass: #e9fac0;
+  --accent-peach: #fbebea;
 
   /* Fonts */
   --font-fallback: Helvetica, Arial, sans-serif;
