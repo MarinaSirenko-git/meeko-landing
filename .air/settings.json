@@ -1,0 +1,5 @@
+{
+    "prettier.mode": "Enabled",
+    "eslint.mode": "Enabled",
+    "stylelint.mode": "Auto"
+}
