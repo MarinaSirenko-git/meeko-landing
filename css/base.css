@@ -131,3 +131,48 @@ a {
   outline: 2px solid #fafafa;
   outline-offset: 4px;
 }
+
+/* Mobile anti-horizontal-scroll guard */
+@media (max-width: 809px) {
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: clip;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  img,
+  svg,
+  video,
+  canvas,
+  iframe {
+    max-width: 100%;
+    height: auto;
+  }
+
+  :where(.flex > *, .grid > *) {
+    min-width: 0;
+  }
+
+  p,
+  a,
+  span,
+  li,
+  h1, h2, h3, h4, h5, h6,
+  code,
+  pre {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  pre {
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}

@@ -1415,6 +1415,7 @@ body.mobile-menu-open {
 @media (max-width: 809px) {
   .stats__title {
     font-size: 36px;
+    text-align: center;
   }
 }
 
@@ -1453,6 +1454,7 @@ body.mobile-menu-open {
 @media (max-width: 809px) {
   .stats__grid {
     margin-top: 20px;
+    padding: 0;
   }
 }
 
@@ -1766,6 +1768,7 @@ body.mobile-menu-open {
   .about__tags {
     flex-direction: column;
     align-items: center;
+    padding: 0;
   }
 }
 
