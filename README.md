@@ -16,8 +16,8 @@ The original visual reference is a free Framer template. The goal of this projec
 
 ### Live Demo
 
-- Demo: not deployed yet
-- Repository: current repository
+- Demo: [meeko-landing.pages.dev](https://meeko-landing.pages.dev/)
+- Repository: [github.com/MarinaSirenko-git/meeko-landing](https://github.com/MarinaSirenko-git/meeko-landing)
 
 ### Design Source
 
@@ -208,8 +208,8 @@ This project is not intended for commercial use as a standalone product.
 
 ### Демо
 
-- Demo: пока не опубликовано
-- Repository: текущий репозиторий
+- Demo: [meeko-landing.pages.dev](https://meeko-landing.pages.dev/)
+- Repository: [github.com/MarinaSirenko-git/meeko-landing](https://github.com/MarinaSirenko-git/meeko-landing)
 
 ### Источник дизайна
 
