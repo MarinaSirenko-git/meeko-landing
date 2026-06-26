@@ -1,388 +1,399 @@
-# Meeko Landing
 
-EN | RU below
+<a id="en"></a>
+
+# Meeko — Responsive Landing Page
+
+[EN](#en) · [RU](#ru)
+
+> **Front-end portfolio case study.** Rebuilding a free Framer template from scratch — semantic markup, hand-tuned responsive layout, scroll-driven GSAP animation, and a custom i18n layer — deployed as a static site on Cloudflare Pages.
+
+**Stack:** HTML · CSS · JavaScript · GSAP · Vite · Cloudflare Pages
+
+🔗 **Live demo:** [https://meeko-landing.pages.dev](https://meeko-landing.pages.dev)  
+🎨 **Design:** [Meeko template by elemis](https://www.framer.com/marketplace/templates/meeko/) · front-end implementation by me  
+📦 **Repository:** [https://github.com/MarinaSirenko-git/meeko-landing](https://github.com/MarinaSirenko-git/meeko-landing)
 
 ---
 
-## EN
+## Context
 
-### Overview
+The reference is a polished Framer portfolio template with rich motion. My job was not to export the template, but to **re-engineer it** — HTML, CSS, vanilla JS, and GSAP — while keeping the visual character and making it work across real devices.
 
-Frontend implementation study based on a free Framer template.
+This is a non-commercial portfolio project. The design belongs to the original author; the code, asset prep, responsive decisions, animation tuning, and deployment are mine.
 
-This is a non-commercial learning project created to practice building an animated landing page with semantic HTML, CSS, JavaScript and GSAP.
+## The challenge
 
-The original visual reference is a free Framer template. The goal of this project is not to present the design as my own, but to recreate the frontend implementation from scratch and practice layout, responsive behavior and animation techniques.
+The Framer reference is animation-heavy: entrance motion, scroll-driven scenes with cards, hover micro-interactions, and looping decorative effects. The goal — recreate the motion layer by hand in CSS and GSAP, preserving timing, easing, and scroll linkage; push the Lighthouse metrics higher; and make sure the layout holds up across all devices and when switching languages.
 
-### Live Demo
+The hard parts:
 
-- Demo: [meeko-landing.pages.dev](https://meeko-landing.pages.dev/)
-- Repository: [github.com/MarinaSirenko-git/meeko-landing](https://github.com/MarinaSirenko-git/meeko-landing)
+- **Scroll-linked sequences** — hero cards unfolding on first scroll, works cards pinning and stacking with scrub, header position tied to scroll progress; each needs its own ScrollTrigger setup and refresh handling.
+- **Layered motion** — CSS loops (photo carousel in the title, spinning badge text) running alongside one-shot GSAP timelines without fighting each other.
+- **Interaction-safe pinning** — the works stack must pin and animate without blocking clicks on testimonials below (`pointer-events`, `z-index`, `ScrollTrigger.refresh()`).
+- **Micro-interactions at scale** — roll-link label swaps on nav and CTAs, tilt on stats/capability chips, avatar lift, burger-to-X, social icon lift — all with `prefers-reduced-motion` fallbacks.
+- **Boot order** — GSAP must not measure layout before fonts and styles load; i18n text changes must not break scroll trigger positions after refresh.
 
-### Design Source
+## What I built
 
-Design reference: Free Framer template  
-Original template author: https://dribbble.com/elemis 
-Template URL: https://www.framer.com/marketplace/templates/meeko/
+- **Responsive layout** with breakpoints at **1300px** (layout / GSAP split) and **809px** (typography and grid reflow) — supporting the animation system, not the main engineering focus.
+- **Custom i18n** — **EN · RU · TH · 中文 (zh-Hans)**, 126 keys, `npm run i18n:check`, desktop globe dropdown + mobile inline language row.
+- **Accessibility & delivery:** skip link, semantic landmarks, reduced-motion bypass for GSAP, Vite → Cloudflare Pages.
 
-This project is used only for educational and portfolio purposes.
+## Animations
 
-### Goals
+### GSAP (7 modules)
 
-- Practice semantic HTML structure.
-- Rebuild a landing page layout from a visual reference.
-- Organize CSS with variables and reusable components.
-- Prepare and optimize local assets.
-- Clean and adapt SVG illustrations from exported source.
-- Learn basic GSAP animation patterns.
-- Implement scroll-based and entrance animations.
-- Improve responsive behavior across desktop, tablet and mobile.
 
-### Tech Stack
+| Module                 | Trigger               | What moves                                                                                                                                                             |
+| ---------------------- | --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `heroIntro.js`         | Page load             | Hero frame, three title lines, description, four floating decorations — fade/slide up with **stagger 0.12s**                                                           |
+| `heroCardsScroll.js`   | Scroll, ≥1300px       | Three portfolio cards start collapsed on the centre card (offset **x/y**, rotation **−6° / 0° / 8°**), then unfold to grid on **scrub** over first **350px** of scroll |
+| `workCardsScroll.js`   | Scroll + pin, ≥1300px | Four work cards **stack** with **y** + **scale** (down to **0.84**); testimonials block pulled up via **marginTop**; **pointer-events** toggled when pin completes     |
+| `processCardScroll.js` | Scroll, all widths    | Process cards start at **opacity 0.6 / scale 0.96**; each card animates to full once when it enters the viewport — **one-way**, no revert on scroll back               |
+| `headerScroll.js`      | Scroll, ≥1300px       | Fixed header **top 40px → 20px**, scrubbed over first **80px**                                                                                                         |
+| `mobileMenu.js`        | Click                 | Drawer **y + fade** in/out; overlay **autoAlpha**; respects reduced motion (instant toggle)                                                                            |
+| `testimonials.js`      | Click                 | Quote panel swap + active avatar state (JS-driven, no GSAP)                                                                                                            |
 
-- HTML
-- CSS
-- JavaScript
-- GSAP
-- ScrollTrigger
-- Vite
 
-### Features
+### CSS — looping & ambient
 
-- Responsive landing page layout.
-- Semantic page structure.
-- Local image and SVG assets.
-- CSS variables for colors, spacing and typography.
-- Inline and external SVG usage.
-- Hero entrance animation.
-- Scroll reveal animations.
-- Staggered card animations.
-- Decorative floating elements.
-- Reduced motion support.
 
-### Animations
+| Effect                  | Where                         | Mechanism                                                    |
+| ----------------------- | ----------------------------- | ------------------------------------------------------------ |
+| **Hero photo carousel** | Avatar in H1 (3 images)       | `@keyframes hero-frame-one/two/three` — **6s** opacity cycle |
+| **Badge text spin**     | About + footer circular badge | `@keyframes badge-text-spin` — **20s** continuous rotation   |
 
-This project uses both native CSS animations and GSAP.
 
-CSS is used for lightweight effects:
+### CSS — hover & focus micro-interactions
 
-- hover and focus states;
-- small decorative floating icons;
-- simple transitions.
 
-GSAP is used for more controlled animations:
+| Effect                               | Where                                                | Mechanism                                                                               |
+| ------------------------------------ | ---------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| **Roll-link**                        | Header nav, “View project”, “Learn more”, footer CTA | Duplicate label track slides up **translateY(−50%)** on hover/focus                     |
+| **Tilt**                             | Stats cards (×5), capability tags (×7)               | **±8°** rotate on hover                                                                 |
+| **Social icon lift**                 | Header X / Dribbble / Instagram                      | **translateY(−2px)** + inset shadow                                                     |
+| **Burger → X**                       | Mobile menu toggle                                   | Top/bottom lines rotate **±45°** into centre                                            |
+| **Testimonial avatar lift**          | Avatar buttons                                       | **translateY(−2px)**; active avatar **64px → 80px**                                     |
+| **Locale buttons**                   | Desktop dropdown + mobile row                        | Background highlight on hover/focus                                                     |
+| **Button / card action transitions** | `.btn`, `.works-card__link`, `.hero-card__action`    | **transform** + **background-color** **0.25s** (paired with roll-link where applicable) |
 
-- hero entrance timeline;
-- section reveal on scroll;
 
-The project also respects `prefers-reduced-motion` where possible.
+### Global motion defaults
 
-### Project Structure
+- `html { scroll-behavior: smooth }` with reduced-motion override.
+- `.js .hero__cards { visibility: hidden }` until GSAP sets initial collapsed state (desktop).
+- GSAP boot deferred until **`load` + `document.fonts.ready` + one rAF** before any ScrollTrigger layout reads.
+
+## Engineering approach
+
+Animation and layout are split by capability, not by page:
+
+```text
+js/features/
+  heroIntro.js          — entrance timeline
+  heroCardsScroll.js    — scroll-linked hero cards (≥1300px)
+  workCardsScroll.js    — pinned work stack (≥1300px)
+  processCardScroll.js  — one-way step activation (all breakpoints)
+  mobileMenu.js         — drawer + overlay
+  testimonials.js       — quote switcher
+  headerScroll.js       — header behaviour on scroll
+js/i18n/                — locale loader, switcher, applyTranslations()
+```
+
+GSAP initializes only after `window.load`, `document.fonts.ready`, and one animation frame — so ScrollTrigger does not measure DOM before styles apply. Fonts load via a dedicated `fonts.css` link before the main stylesheet to avoid preload warnings in production.
+
+External placeholder links (social icons, “View project”) point to the [original Framer template](https://www.framer.com/marketplace/templates/meeko/) with `target="_blank"` and `rel="noopener noreferrer"`.
+
+AI tools assisted with repetitive tasks (SVG cleanup, i18n wiring, docs). Layout decisions, animation timing, responsive behaviour, and final code review were done manually. See [Agent.md](./agents/Agent.md) for workflow notes.
+
+## Tech stack
+
+
+| Area             | Tools                                                    |
+| ---------------- | -------------------------------------------------------- |
+| Markup & styling | HTML, CSS (custom properties, desktop-first breakpoints) |
+| Behaviour        | Vanilla JavaScript (ES modules)                          |
+| Animation        | GSAP, ScrollTrigger                                      |
+| i18n             | Custom JSON-based layer (`js/i18n/`)                     |
+| Tooling          | Vite 6                                                   |
+| Hosting          | Cloudflare Pages                                         |
+
+
+## Local development
+
+**Requirements:** Node.js 18+
+
+```bash
+git clone https://github.com/MarinaSirenko-git/meeko-landing.git
+cd meeko-landing
+npm install
+npm run dev
+```
+
+Vite prints the local URL (default `http://localhost:5173`). Hot reload is enabled for HTML, CSS, and JS.
+
+### Useful scripts
+
+
+| Command              | Description                                  |
+| -------------------- | -------------------------------------------- |
+| `npm run dev`        | Start dev server                             |
+| `npm run build`      | Production build → `dist/`                   |
+| `npm run preview`    | Serve `dist/` locally                        |
+| `npm run i18n:check` | Verify translation key parity across locales |
+
+
+## Deploy to Cloudflare Pages
+
+### Option A — Git integration (recommended)
+
+1. Push this repository to GitHub.
+2. In [Cloudflare Dashboard](https://dash.cloudflare.com/) → **Workers & Pages** → **Create** → **Pages** → **Connect to Git**.
+3. Select the repository and use these build settings:
+
+
+| Setting                | Value           |
+| ---------------------- | --------------- |
+| Framework preset       | None (or Vite)  |
+| Build command          | `npm run build` |
+| Build output directory | `dist`          |
+| Node.js version        | 18 or newer     |
+
+
+1. Save and deploy. Cloudflare rebuilds on every push to the production branch.
+
+### Option B — Manual deploy with Wrangler
+
+```bash
+npm run build
+npx wrangler pages deploy dist --project-name meeko-landing
+```
+
+Requires [Wrangler](https://developers.cloudflare.com/workers/wrangler/) installed and authenticated (`npx wrangler login`).
+
+The live site is served from **[https://meeko-landing.pages.dev](https://meeko-landing.pages.dev)** (custom domain optional in Pages settings).
+
+## Project structure
 
 ```text
 /
   index.html
-  css/
-    reset.css
-    variables.css
-    fonts.css
-    base.css
-    layout.css
-    components.css
-    styles.css
+  css/                  # reset, variables, fonts, base, layout, components
   js/
-    main.js
-    lib/
-      gsap.js
-      motion.js
-    features/
-      heroIntro.js
-      heroCardsScroll.js
-      processCardScroll.js
-      workCardsScroll.js
-      headerScroll.js
-      mobileMenu.js
-      testimonials.js
+    main.js             # bootstrap: i18n → layout ready → features
+    i18n/               # locales + switcher
+    features/           # scroll / menu / testimonials modules
+    lib/                # gsap, motion helpers
   public/
-    assets/
-      fonts/
-      icons/
-      images/
+    assets/             # fonts, icons, images
+    favicon.svg
   agents/
     Agent.md
 ```
 
-### What I Practiced
+## Credits
 
-HTML:
-
-- Semantic layout with `header`, `main`, `section`, `footer`, `nav`.
-- Accessible navigation structure.
-- Correct usage of links and buttons.
-- Image attributes: `alt`, `width`, `height`, `loading`, `decoding`.
-- SVG cleanup and preparation.
-
-CSS:
-
-- CSS custom properties.
-- Responsive layout.
-- BEM-style class naming.
-- Typography setup.
-- Decorative elements.
-- Hover/focus states.
-- Basic motion with transitions and keyframes.
-
-JavaScript / GSAP:
-
-- GSAP setup in a vanilla JavaScript project.
-- Timeline animation.
-- ScrollTrigger basics.
-- Stagger animation.
-- Animation hooks with reusable classes.
-- Reduced motion handling.
-
-### AI-Assisted Workflow
-
-AI tools were used as development assistants during the project.
-
-AI was used for:
-
-- cleaning SVG markup exported from Framer;
-- converting token-style colors into readable CSS variables;
-- suggesting semantic HTML structure;
-- reviewing naming and asset organization;
-- improving documentation.
-
-All final implementation decisions, code review, layout adjustments, responsive behavior and animation tuning were done manually.
-
-More details are available in [Agent.md](./agents/Agent.md).
-
-### Installation
-
-```bash
-npm install
-```
-
-### Development
-
-```bash
-npm run dev
-```
-
-### Build
-
-```bash
-npm run build
-```
-
-### Preview
-
-```bash
-npm run preview
-```
-
-### Notes
-
-This project is a frontend implementation study.
-The original design belongs to its respective author.
-The code, asset preparation, layout implementation and animations were rebuilt manually for learning and portfolio purposes.
-
-### License / Credits
-
-Design reference: Free Framer template by original author  
-Implementation: Marina Sirenko
-
-This project is not intended for commercial use as a standalone product.
+- **Design:** [Meeko — free Framer template by elemis](https://www.framer.com/marketplace/templates/meeko/) ([Dribbble](https://dribbble.com/elemis)).
+- **Front-end:** markup, responsive engineering, i18n, GSAP animation, optimization, and deployment by Marina Sirenko.
+- Brand name and template content belong to the original author. This repo is for education and portfolio only — not for commercial resale as a standalone product.
 
 ---
 
-## RU
+<a id="ru"></a>
 
-### Обзор
+# Meeko — адаптивный лендинг
 
-Учебный фронтенд-проект, основанный на бесплатном шаблоне Framer.
+[EN](#en) · [RU](#ru)
 
-Это некоммерческий проект для практики создания анимированного лендинга с использованием семантического HTML, CSS, JavaScript и GSAP.
+> **Кейс для портфолио.** Пересборка бесплатного шаблона Framer с нуля — семантическая разметка, ручной адаптив, GSAP-анимации по скроллу и кастомный i18n — с деплоем статического сайта на Cloudflare Pages.
 
-Исходным визуальным референсом был бесплатный шаблон Framer. Цель проекта — не выдать дизайн за собственный, а воссоздать фронтенд-реализацию с нуля и отработать верстку, адаптив и анимационные техники.
+**Стек:** HTML · CSS · JavaScript · GSAP · Vite · Cloudflare Pages
 
-### Демо
+🔗 **Демо:** [https://meeko-landing.pages.dev](https://meeko-landing.pages.dev)  
+🎨 **Дизайн:** [шаблон Meeko от elemis](https://www.framer.com/marketplace/templates/meeko/) · фронтенд-реализация — моя  
+📦 **Репозиторий:** [https://github.com/MarinaSirenko-git/meeko-landing](https://github.com/MarinaSirenko-git/meeko-landing)
 
-- Demo: [meeko-landing.pages.dev](https://meeko-landing.pages.dev/)
-- Repository: [github.com/MarinaSirenko-git/meeko-landing](https://github.com/MarinaSirenko-git/meeko-landing)
+---
 
-### Источник дизайна
+## Контекст
 
-Референс дизайна: бесплатный шаблон Framer  
-Автор оригинального шаблона: https://dribbble.com/elemis  
-Ссылка на шаблон: https://www.framer.com/marketplace/templates/meeko/
+Референс — Framer-шаблон портфолио, насыщенный анимациями. Задача была не экспортировать шаблон, а **пересобрать его** — HTML, CSS, vanilla JS и GSAP — сохранив визуальный характер и сделав страницу рабочей на реальных устройствах.
 
-Проект используется только в учебных целях и для портфолио.
+Это некоммерческий проект для портфолио. Дизайн принадлежит оригинальному автору; код, подготовка ассетов, адаптивные решения, настройка анимаций и деплой — мои.
 
-### Цели
+## Задача
 
-- Практика семантической HTML-структуры.
-- Воссоздание лендинга по визуальному референсу.
-- Организация CSS через переменные и переиспользуемые компоненты.
-- Подготовка и оптимизация локальных ассетов.
-- Очистка и адаптация SVG из экспортированного исходника.
-- Изучение базовых паттернов анимаций GSAP.
-- Реализация entrance- и scroll-анимаций.
-- Улучшение адаптивности для desktop, tablet и mobile.
+Framer-референс насыщен анимацией: entrance-motion, скролл-сцены с карточками, hover-микроинтеракции и зацикленные декоративные эффекты. Задача — воссоздать motion-слой вручную на CSS и GSAP, сохранив тайминг, easing и привязку к скроллу; поднять метрики Lighthouse; убедиться, что вёрстка не ломается на всех устройствах и при смене языка.
 
-### Технологии
+Сложные места:
 
-- HTML
-- CSS
-- JavaScript
-- GSAP
-- ScrollTrigger
-- Vite
+- **Scroll-последовательности** — раскрытие hero-карточек при первом скролле, pin/stack в Works со scrub, смещение header по progress; у каждой свой ScrollTrigger и обработка refresh.
+- **Наслоение motion** — CSS-циклы (карусель фото в заголовке, вращение текста на badge) параллельно с one-shot GSAP-таймлайнами.
+- **Pin без поломки кликов** — стопка Works не должна перехватывать testimonials (`pointer-events`, `z-index`, `ScrollTrigger.refresh()`).
+- **Микроинтеракции в масштабе** — roll-link на nav и CTA, tilt на stats/тегах, lift аватаров, burger→X, lift социконок — с fallback при `prefers-reduced-motion`.
+- **Порядок загрузки** — GSAP не измеряет layout до шрифтов и стилей; смена языка не ломает позиции триггеров после refresh.
 
-### Функциональность
+## Что сделано
 
-- Адаптивный layout лендинга.
-- Семантическая структура страницы.
-- Локальные изображения и SVG-ассеты.
-- CSS-переменные для цветов, отступов и типографики.
-- Использование inline и external SVG.
-- Entrance-анимация hero-секции.
-- Scroll reveal-анимации.
-- Stagger-анимации карточек.
-- Декоративные плавающие элементы.
-- Поддержка reduced motion.
+- **Адаптивный layout** с брейкпоинтами **1300px** и **809px** — поддерживает анимации, но не был главным инженерным фокусом.
+- **Кастомный i18n** — **EN · RU · TH · 中文**, 126 ключей, `npm run i18n:check`, globe на desktop + строка языков в mobile-меню.
+- **Доступность и доставка:** skip link, landmarks, reduced motion для GSAP, Vite → Cloudflare Pages.
 
-### Анимации
+## Анимации
 
-В проекте используются нативные CSS-анимации и GSAP.
+### GSAP (7 модулей)
 
-CSS применяется для легких эффектов:
 
-- состояния hover/focus;
-- небольшие декоративные плавающие иконки;
-- простые переходы.
+| Модуль                 | Триггер               | Что двигается                                                                                                                                                |
+| ---------------------- | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `heroIntro.js`         | Загрузка              | Frame, три строки заголовка, описание, четыре декорации — fade/slide вверх со **stagger 0.12s**                                                              |
+| `heroCardsScroll.js`   | Скролл, ≥1300px       | Три hero-карточки стартуют схлопнутыми на центре (**x/y**, rotation **−6° / 0° / 8°**), раскрываются в сетку на **scrub** первых **350px**                   |
+| `workCardsScroll.js`   | Скролл + pin, ≥1300px | Четыре карточки работ **стопкой** с **y** + **scale** (до **0.84**); testimonials подтягивается через **marginTop**; **pointer-events** после завершения pin |
+| `processCardScroll.js` | Скролл, все ширины    | Карточки process стартуют **opacity 0.6 / scale 0.96**; при входе во viewport — полная яркость **один раз**, без отката при скролле назад                    |
+| `headerScroll.js`      | Скролл, ≥1300px       | Header **top 40px → 20px**, scrub на первых **80px**                                                                                                         |
+| `mobileMenu.js`        | Клик                  | Drawer **y + fade**; overlay **autoAlpha**; instant при reduced motion                                                                                       |
+| `testimonials.js`      | Клик                  | Смена цитаты + active-состояние аватара (JS, без GSAP)                                                                                                       |
 
-GSAP применяется для более управляемых анимаций:
 
-- timeline появления hero-секции;
-- раскрытие секций при скролле;
-- stagger-анимации элементов;
+### CSS — циклы и фон
 
-Там, где возможно, учитывается `prefers-reduced-motion`.
 
-### Структура проекта
+| Эффект                        | Где                  | Механизм                                                       |
+| ----------------------------- | -------------------- | -------------------------------------------------------------- |
+| **Карусель фото в заголовке** | Аватар в H1 (3 фото) | `@keyframes hero-frame-one/two/three` — цикл **6s** по opacity |
+| **Вращение текста badge**     | About + footer       | `@keyframes badge-text-spin` — **20s** непрерывно              |
+
+
+### CSS — hover и focus
+
+
+| Эффект                     | Где                                               | Механизм                                            |
+| -------------------------- | ------------------------------------------------- | --------------------------------------------------- |
+| **Roll-link**              | Nav, «View project», «Learn more», footer CTA     | Дублированный текст сдвигается **translateY(−50%)** |
+| **Tilt**                   | Stats (×5), capability-теги (×7)                  | Поворот **±8°** при hover                           |
+| **Lift социконок**         | X / Dribbble / Instagram в шапке                  | **translateY(−2px)**                                |
+| **Burger → X**             | Кнопка меню                                       | Линии **±45°** в центр                              |
+| **Lift аватаров**          | Testimonials                                      | **translateY(−2px)**; active **64px → 80px**        |
+| **Кнопки языка**           | Dropdown + mobile row                             | Подсветка фона                                      |
+| **Transitions на кнопках** | `.btn`, `.works-card__link`, `.hero-card__action` | **transform** + **background** **0.25s**            |
+
+
+### Общие настройки motion
+
+- `scroll-behavior: smooth` с отключением при reduced motion.
+- `.js .hero__cards { visibility: hidden }` до GSAP initial state (desktop).
+- GSAP стартует после **`load` + `document.fonts.ready` + один rAF** перед любыми layout-чтениями ScrollTrigger.
+
+## Подход к реализации
+
+Анимация и layout разделены по зонам ответственности, а не по страницам:
+
+```text
+js/features/
+  heroIntro.js          — entrance timeline
+  heroCardsScroll.js    — scroll-linked hero cards (≥1300px)
+  workCardsScroll.js    — pinned work stack (≥1300px)
+  processCardScroll.js  — one-way step activation (all breakpoints)
+  mobileMenu.js         — drawer + overlay
+  testimonials.js       — quote switcher
+  headerScroll.js       — header behaviour on scroll
+js/i18n/                — locale loader, switcher, applyTranslations()
+```
+
+GSAP инициализируется только после `window.load`, `document.fonts.ready` и одного animation frame — чтобы ScrollTrigger не измерял DOM до применения стилей. Шрифты подключаются отдельным `fonts.css` до основного stylesheet, чтобы избежать preload-предупреждений в production.
+
+Внешние placeholder-ссылки (соцсети, «View project») ведут на [оригинальный Framer-шаблон](https://www.framer.com/marketplace/templates/meeko/) с `target="_blank"` и `rel="noopener noreferrer"`.
+
+AI-инструменты помогали с рутиной (очистка SVG, i18n, документация). Решения по layout, таймингу анимаций, адаптиву и финальное ревью кода — вручную. Подробнее о workflow — в [Agent.md](./agents/Agent.md).
+
+## Стек
+
+
+| Область          | Инструменты                                              |
+| ---------------- | -------------------------------------------------------- |
+| Разметка и стили | HTML, CSS (custom properties, desktop-first breakpoints) |
+| Поведение        | Vanilla JavaScript (ES modules)                          |
+| Анимация         | GSAP, ScrollTrigger                                      |
+| i18n             | Кастомный JSON-слой (`js/i18n/`)                         |
+| Tooling          | Vite 6                                                   |
+| Хостинг          | Cloudflare Pages                                         |
+
+
+## Локальная разработка
+
+**Требования:** Node.js 18+
+
+```bash
+git clone https://github.com/MarinaSirenko-git/meeko-landing.git
+cd meeko-landing
+npm install
+npm run dev
+```
+
+Vite выведет локальный URL (по умолчанию `http://localhost:5173`). Hot reload включён для HTML, CSS и JS.
+
+### Полезные команды
+
+
+| Команда              | Описание                          |
+| -------------------- | --------------------------------- |
+| `npm run dev`        | Запуск dev-сервера                |
+| `npm run build`      | Production-сборка → `dist/`       |
+| `npm run preview`    | Локальный просмотр `dist/`        |
+| `npm run i18n:check` | Проверка паритета ключей перевода |
+
+
+## Деплой на Cloudflare Pages
+
+### Вариант A — интеграция с Git (рекомендуется)
+
+1. Запушьте репозиторий на GitHub.
+2. В [Cloudflare Dashboard](https://dash.cloudflare.com/) → **Workers & Pages** → **Create** → **Pages** → **Connect to Git**.
+3. Выберите репозиторий и укажите настройки сборки:
+
+
+| Параметр               | Значение        |
+| ---------------------- | --------------- |
+| Framework preset       | None (или Vite) |
+| Build command          | `npm run build` |
+| Build output directory | `dist`          |
+| Node.js version        | 18 или новее    |
+
+
+1. Сохраните и задеплойте. Cloudflare пересобирает сайт при каждом push в production-ветку.
+
+### Вариант B — ручной деплой через Wrangler
+
+```bash
+npm run build
+npx wrangler pages deploy dist --project-name meeko-landing
+```
+
+Нужны установленный и авторизованный [Wrangler](https://developers.cloudflare.com/workers/wrangler/) (`npx wrangler login`).
+
+Живой сайт: **[https://meeko-landing.pages.dev](https://meeko-landing.pages.dev)** (кастомный домен — опционально в настройках Pages).
+
+## Структура проекта
 
 ```text
 /
   index.html
-  css/
-    reset.css
-    variables.css
-    fonts.css
-    base.css
-    layout.css
-    components.css
-    styles.css
+  css/                  # reset, variables, fonts, base, layout, components
   js/
-    main.js
-    lib/
-      gsap.js
-      motion.js
-    features/
-      heroIntro.js
-      heroCardsScroll.js
-      processCardScroll.js
-      workCardsScroll.js
-      headerScroll.js
-      mobileMenu.js
-      testimonials.js
+    main.js             # bootstrap: i18n → layout ready → features
+    i18n/               # locales + switcher
+    features/           # scroll / menu / testimonials modules
+    lib/                # gsap, motion helpers
   public/
-    assets/
-      fonts/
-      icons/
-      images/
+    assets/             # fonts, icons, images
+    favicon.svg
   agents/
     Agent.md
 ```
 
-### Что было отработано
+## Авторство
 
-HTML:
+- **Дизайн:** [Meeko — бесплатный Framer-шаблон от elemis](https://www.framer.com/marketplace/templates/meeko/) ([Dribbble](https://dribbble.com/elemis)).
+- **Фронтенд:** разметка, адаптив, i18n, GSAP-анимации, оптимизация и деплой — Marina Sirenko.
+- Название бренда и контент шаблона принадлежат оригинальному автору. Репозиторий только для обучения и портфолио — не для коммерческой перепродажи как самостоятельного продукта.
 
-- Семантическая структура с `header`, `main`, `section`, `footer`, `nav`.
-- Доступная структура навигации.
-- Корректное использование ссылок и кнопок.
-- Атрибуты изображений: `alt`, `width`, `height`, `loading`, `decoding`.
-- Очистка и подготовка SVG.
-
-CSS:
-
-- CSS custom properties.
-- Адаптивная верстка.
-- Именование классов в стиле BEM.
-- Настройка типографики.
-- Декоративные элементы.
-- Состояния hover/focus.
-- Базовая анимация через transitions и keyframes.
-
-JavaScript / GSAP:
-
-- Подключение GSAP в vanilla JavaScript-проекте.
-- Timeline-анимации.
-- Базовый ScrollTrigger.
-- Stagger-анимации.
-- Animation hooks через переиспользуемые классы.
-- Обработка reduced motion.
-
-### AI-assisted Workflow
-
-AI-инструменты использовались как помощники в процессе разработки.
-
-AI применялся для:
-
-- очистки SVG-разметки, экспортированной из Framer;
-- преобразования token-цветов в читаемые CSS-переменные;
-- подсказок по семантической HTML-структуре;
-- ревью именования и организации ассетов;
-- улучшения документации.
-
-Все финальные решения по реализации, ревью кода, правки верстки, адаптив и анимационный тюнинг выполнялись вручную.
-
-Подробнее — в [Agent.md](./agents/Agent.md).
-
-### Установка
-
-```bash
-npm install
-```
-
-### Разработка
-
-```bash
-npm run dev
-```
-
-### Сборка
-
-```bash
-npm run build
-```
-
-### Предпросмотр
-
-```bash
-npm run preview
-```
-
-### Примечания
-
-Это учебный проект по фронтенд-реализации.
-Оригинальный дизайн принадлежит его автору.
-Код, подготовка ассетов, верстка и анимации были выполнены вручную для обучения и портфолио.
-
-### Лицензия / Credits
-
-Референс дизайна: бесплатный шаблон Framer от оригинального автора  
-Реализация: Marina Sirenko
-
-Проект не предназначен для коммерческого использования как самостоятельный продукт.
