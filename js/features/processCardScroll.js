@@ -3,11 +3,12 @@ import { prefersReducedMotion } from "../lib/motion.js";
 
 const ACTIVE_PROPS = {
   scale: 1,
-  opacity: 1,
   duration: 0.4,
   ease: "power2.out",
   overwrite: "auto",
 };
+
+const INACTIVE_SCALE = 0.97;
 
 export function initProcessCardScroll() {
   if (prefersReducedMotion) return;
@@ -30,8 +31,7 @@ export function initProcessCardScroll() {
 
   gsap.set(cards, {
     transformOrigin: "center center",
-    scale: 0.96,
-    opacity: 0.6,
+    scale: INACTIVE_SCALE,
   });
 
   cards.forEach((card) => {

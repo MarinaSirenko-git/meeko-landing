@@ -1426,6 +1426,11 @@ body.mobile-menu-open {
   border-radius: 20px;
   color: var(--main-text);
   min-height: 260px;
+  transition: box-shadow 0.4s ease;
+}
+
+.process__card--active {
+  box-shadow: rgba(29, 29, 29, 0.1) 0 10px 28px;
 }
 
 @media (max-width: 1299px) {
@@ -1498,8 +1503,9 @@ body.mobile-menu-open {
 
 .process__card-description {
   font-size: 18px;
-  font-weight: 375;
+  font-weight: 400;
   line-height: 1.55;
+  color: var(--main-text);
 }
 
 .stats {
