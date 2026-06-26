@@ -1,9 +1,10 @@
+<p align="right" style="position: sticky; top: 0; z-index: 10; background-color: #ffffff; padding: 10px 0; margin: 0 0 8px; border-bottom: 1px solid #d0d7de;">
+  <a href="#en"><strong>EN</strong></a>
+  &nbsp;·&nbsp;
+  <a href="#ru"><strong>RU</strong></a>
+</p>
 
-<a id="en"></a>
-
-# Meeko — Responsive Landing Page
-
-[EN](#en) · [RU](#ru)
+<h1 id="en" style="scroll-margin-top: 56px;">Meeko — Responsive Landing Page</h1>
 
 > **Front-end portfolio case study.** Rebuilding a free Framer template from scratch — semantic markup, hand-tuned responsive layout, scroll-driven GSAP animation, and a custom i18n layer — deployed as a static site on Cloudflare Pages.
 
@@ -38,6 +39,33 @@ The hard parts:
 - **Responsive layout** with breakpoints at **1300px** (layout / GSAP split) and **809px** (typography and grid reflow) — supporting the animation system, not the main engineering focus.
 - **Custom i18n** — **EN · RU · TH · 中文 (zh-Hans)**, 126 keys, `npm run i18n:check`, desktop globe dropdown + mobile inline language row.
 - **Accessibility & delivery:** skip link, semantic landmarks, reduced-motion bypass for GSAP, Vite → Cloudflare Pages.
+
+## Lighthouse (production)
+
+Audited on **[meeko-landing.pages.dev](https://meeko-landing.pages.dev)** with Google Lighthouse (June 2026), after responsive images, lazy i18n, and deferred font loading.
+
+### Category scores
+
+
+| Category       | Mobile | Desktop |
+| -------------- | ------ | ------- |
+| Performance    | **98** | **98**  |
+| Accessibility  | **97** | **97**  |
+| Best Practices | **100**| **100** |
+| SEO            | **100**| **100** |
+
+
+### Core metrics
+
+
+| Metric                   | Mobile | Desktop |
+| ------------------------ | ------ | ------- |
+| First Contentful Paint   | 1.8 s  | 0.6 s   |
+| Largest Contentful Paint | 2.2 s  | 0.6 s   |
+| Total Blocking Time      | 0 ms   | 0 ms    |
+| Cumulative Layout Shift  | 0.002  | 0.088   |
+| Speed Index              | 1.8 s  | 0.7 s   |
+
 
 ## Animations
 
@@ -199,11 +227,7 @@ The live site is served from **[https://meeko-landing.pages.dev](https://meeko-l
 
 ---
 
-<a id="ru"></a>
-
-# Meeko — адаптивный лендинг
-
-[EN](#en) · [RU](#ru)
+<h1 id="ru" style="scroll-margin-top: 56px;">Meeko — адаптивный лендинг</h1>
 
 > **Кейс для портфолио.** Пересборка бесплатного шаблона Framer с нуля — семантическая разметка, ручной адаптив, GSAP-анимации по скроллу и кастомный i18n — с деплоем статического сайта на Cloudflare Pages.
 
@@ -238,6 +262,33 @@ Framer-референс насыщен анимацией: entrance-motion, ск
 - **Адаптивный layout** с брейкпоинтами **1300px** и **809px** — поддерживает анимации, но не был главным инженерным фокусом.
 - **Кастомный i18n** — **EN · RU · TH · 中文**, 126 ключей, `npm run i18n:check`, globe на desktop + строка языков в mobile-меню.
 - **Доступность и доставка:** skip link, landmarks, reduced motion для GSAP, Vite → Cloudflare Pages.
+
+## Lighthouse (production)
+
+Проверка **[meeko-landing.pages.dev](https://meeko-landing.pages.dev)** в Google Lighthouse (июнь 2026) после responsive images, lazy i18n и отложенной загрузки шрифтов.
+
+### Оценки по категориям
+
+
+| Категория          | Mobile | Desktop |
+| ------------------ | ------ | ------- |
+| Performance        | **98** | **98**  |
+| Accessibility      | **97** | **97**  |
+| Best Practices     | **100**| **100** |
+| SEO                | **100**| **100** |
+
+
+### Ключевые метрики
+
+
+| Метрика                  | Mobile | Desktop |
+| ------------------------ | ------ | ------- |
+| First Contentful Paint   | 1.8 s  | 0.6 s   |
+| Largest Contentful Paint | 2.2 s  | 0.6 s   |
+| Total Blocking Time      | 0 ms   | 0 ms    |
+| Cumulative Layout Shift  | 0.002  | 0.088   |
+| Speed Index              | 1.8 s  | 0.7 s   |
+
 
 ## Анимации
 
