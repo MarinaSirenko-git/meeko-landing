@@ -56,9 +56,48 @@ export function getSupportedLocales() {
   return [...SUPPORTED_LOCALES];
 }
 
+/** @type {Map<string, Promise<void>>} */
+const localeLoadPromises = new Map();
+
 async function loadLocale(loc) {
   const data = await import(`./locales/${loc}.json`);
   messages[loc] = data.default;
+}
+
+async function ensureLocaleLoaded(loc) {
+  if (messages[loc]) {
+    return;
+  }
+
+  let promise = localeLoadPromises.get(loc);
+  if (!promise) {
+    promise = loadLocale(loc).catch((error) => {
+      localeLoadPromises.delete(loc);
+      throw error;
+    });
+    localeLoadPromises.set(loc, promise);
+  }
+
+  await promise;
+}
+
+function scheduleIdleLocalePreload() {
+  const pending = SUPPORTED_LOCALES.filter((loc) => !messages[loc]);
+  if (pending.length === 0) {
+    return;
+  }
+
+  const preload = () => {
+    pending.forEach((loc) => {
+      void ensureLocaleLoaded(loc);
+    });
+  };
+
+  if ("requestIdleCallback" in window) {
+    requestIdleCallback(preload, { timeout: 4000 });
+  } else {
+    window.setTimeout(preload, 2000);
+  }
 }
 
 function parseParams(raw) {
@@ -236,6 +275,8 @@ export async function setLocale(newLocale) {
     return;
   }
 
+  await ensureLocaleLoaded(newLocale);
+
   const localeChanged = newLocale !== locale;
   locale = newLocale;
   localStorage.setItem(STORAGE_KEY, newLocale);
@@ -253,7 +294,13 @@ export async function setLocale(newLocale) {
 export async function initI18n() {
   locale = detectInitialLocale();
 
-  await Promise.all(SUPPORTED_LOCALES.map((loc) => loadLocale(loc)));
+  await ensureLocaleLoaded(locale);
+
+  if (locale !== DEFAULT_LOCALE) {
+    void ensureLocaleLoaded(DEFAULT_LOCALE);
+  }
+
+  scheduleIdleLocalePreload();
 
   document.documentElement.lang = locale;
   applyTranslations();
