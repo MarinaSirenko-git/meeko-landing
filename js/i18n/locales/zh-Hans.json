@@ -1,0 +1,188 @@
+{
+  "meta": {
+    "title": "Meeko",
+    "description": "Meeko — 创意工作室落地页：服务、作品、关于与联系。"
+  },
+  "common": {
+    "brand": "Meeko",
+    "skipToContent": "跳转到主要内容",
+    "works": "作品",
+    "about": "关于",
+    "contact": "联系",
+    "viewProject": "查看项目",
+    "learnMore": "了解更多",
+    "getInTouch": "取得联系",
+    "portfolio": "作品集",
+    "aboutMe": "关于我",
+    "contactMe": "联系我",
+    "menu": "菜单",
+    "openMenu": "打开菜单",
+    "closeMenu": "关闭菜单"
+  },
+  "nav": {
+    "main": "主导航",
+    "mobile": "移动端导航",
+    "social": "社交链接",
+    "footer": "页脚链接",
+    "worksAria": "作品",
+    "aboutAria": "关于",
+    "contactAria": "联系",
+    "x": "X",
+    "dribbble": "Dribbble",
+    "instagram": "Instagram"
+  },
+  "locale": {
+    "label": "语言",
+    "en": "EN",
+    "ru": "RU",
+    "th": "TH",
+    "zhHans": "中文"
+  },
+  "hero": {
+    "webDevelopment": "Web 开发",
+    "noCodeDesign": "无代码设计",
+    "hello": "你好！",
+    "intro": "我是 Meeko，",
+    "role": "一名产品设计师。",
+    "description": "我专注于 <strong>HTML</strong>、<strong>CSS</strong>、<strong>WordPress</strong> 和 <strong>Framer</strong>，在将设计稿落地为响应式网站方面经验丰富。",
+    "cardsAria": "精选页面",
+    "portfolioTitle": "我的作品集",
+    "portfolioDescription": "浏览精选项目，了解我的设计方法。",
+    "aboutTitle": "关于我",
+    "aboutDescription": "更近距离了解我的背景、技能与创作历程。",
+    "contactTitle": "联系我",
+    "contactDescription": "让我们一起把你的想法与愿景变为现实。"
+  },
+  "works": {
+    "title": "精选作品",
+    "description": "凭借对细节的敏锐观察与批判性思维，我擅长打造引人入胜的 <strong>网站</strong>、<strong>产品</strong> 与 <strong>体验</strong>。",
+    "bigShake": {
+      "eyebrow": "品牌设计，Framer",
+      "title": "The Big Shake",
+      "description": "围绕清晰与一致性构建，这套作品以现代美学塑造精炼的视觉识别，并在全链路保持统一的品牌表达。",
+      "imageAlt": "The Big Shake 项目预览"
+    },
+    "transparentThings": {
+      "eyebrow": "网页设计，字体排印",
+      "title": "Transparent Things",
+      "description": "强调精准与结构，这份作品在一致的视觉系统框架内，将清晰与现代美学融为一体。",
+      "imageAlt": "Transparent Things 项目预览"
+    },
+    "phantomLimb": {
+      "eyebrow": "Logo 设计，WordPress",
+      "title": "Phantom Limb",
+      "description": "结合清晰表达与当代设计思维，该项目交付经过深思熟虑的视觉识别，并保持有力且一致的品牌对齐。",
+      "imageAlt": "Phantom Limb 项目预览"
+    },
+    "heatLightning": {
+      "eyebrow": "Webflow，UX 设计",
+      "title": "Heat Lightning",
+      "description": "该项目以精细的设计方法为驱动，在清晰与意图之间取得平衡，并呈现当代视觉与整体和谐的品牌表达。",
+      "imageAlt": "Heat Lightning 项目预览"
+    }
+  },
+  "testimonials": {
+    "title": "客户评价",
+    "choose": "选择评价",
+    "natalie": {
+      "quote": "“从一开始，合作就非常顺畅。每个想法都被仔细打磨成有意义的结果，最终成果完全符合我们的预期。”",
+      "name": "娜塔莉·布鲁克斯",
+      "role": "市场经理",
+      "avatarAlt": "娜塔莉·布鲁克斯"
+    },
+    "daniel": {
+      "quote": "“我与许多设计师合作过，但这次体验完全不同。对细节的关注与周全的方法让整个流程顺畅而愉快。”",
+      "name": "丹尼尔·福斯特",
+      "role": "初创公司创始人",
+      "avatarAlt": "丹尼尔·福斯特"
+    },
+    "ethan": {
+      "quote": "“起初我不确定会怎样，但结果比预期更好。沟通清晰，时间守时，最终成果也很现代。”",
+      "name": "伊桑·考德威尔",
+      "role": "产品总监",
+      "avatarAlt": "伊桑·考德威尔"
+    }
+  },
+  "process": {
+    "title": "高质量作品，始终考虑真实价值。",
+    "description": "我的工作流程围绕在清晰与专注中最大化生产力与创造力。它从深入研究与规划开始，收集相关信息并梳理关键目标。",
+    "step01": {
+      "number": "(01)",
+      "title": "问题界定",
+      "description": "我会探索洞察与市场语境，清晰定义问题。研究结果会被转化为塑造方向、支撑决策并为项目奠定坚实基础的想法。"
+    },
+    "step02": {
+      "number": "(02)",
+      "title": "构思成型",
+      "description": "在此阶段，我将初步想法打磨为清晰概念，使策略与创意对齐。我会发展结构方向，在创新与可行性之间取得平衡，同时支持品牌目标与用户预期。"
+    },
+    "step03": {
+      "number": "(03)",
+      "title": "体验测试",
+      "description": "这一阶段通过原型与真实场景测试让概念落地。我会验证功能、可用性与清晰度，基于反馈迭代、完善细节，并在最终交付前解决问题。"
+    },
+    "step04": {
+      "number": "(04)",
+      "title": "成果打磨",
+      "description": "在设计最后阶段，我会细致打磨产品，通过测试、微调与迭代确保其达到高质量与功能性标准，并处理剩余问题。"
+    }
+  },
+  "stats": {
+    "title": "数字说明一切",
+    "description": "这些数字反映了多年来我所交付工作的 <strong>经验</strong>、<strong>稳定性</strong> 与可衡量的影响。",
+    "satisfiedCustomers": "满意客户",
+    "yearsExperience": "年工作经验",
+    "projectsDone": "成功项目",
+    "awardsReceived": "设计奖项",
+    "travelledCountry": "游历全国城市"
+  },
+  "about": {
+    "badgeText": "– 可接案 – FREELANCE",
+    "title": "嘿！这就是我。",
+    "paragraph1": "我是 Meeko，一位多学科设计师兼博主，现居活力城市 Los Angeles。我对美学有敏锐感知，也擅长创新解决方案，活跃于设计的交汇点。",
+    "paragraph2": "在这个动态且不断演进的领域中，我的旅程体现了我对精心打造有意义用户体验、运用前沿技术，并大胆拓展数字创意边界的热情。",
+    "capabilitiesTitle": "我的能力",
+    "capabilitiesLead": "我提供的服务经过精心设计，专门贴合你的 <strong>独特需求</strong> 与 <strong>要求</strong>。",
+    "skills": {
+      "uiDesign": {
+        "name": "UI Design",
+        "ariaLabel": "UI Design: 95%"
+      },
+      "webDesign": {
+        "name": "Web Design",
+        "ariaLabel": "Web Design: 97%"
+      },
+      "framer": {
+        "name": "Framer",
+        "ariaLabel": "Framer: 85%"
+      },
+      "wordpress": {
+        "name": "Wordpress",
+        "ariaLabel": "Wordpress: 80%"
+      },
+      "photoshop": {
+        "name": "Photoshop",
+        "ariaLabel": "Photoshop: 90%"
+      },
+      "illustration": {
+        "name": "Illustration",
+        "ariaLabel": "Illustration: 65%"
+      }
+    },
+    "tags": {
+      "mobileDesign": "Mobile Design",
+      "uxProductDesign": "UX & Product Design",
+      "identityBranding": "Identity & Branding",
+      "illustration": "Illustration",
+      "webDevelopment": "Web 开发",
+      "shopifyIntegration": "Shopify 集成",
+      "digitalSolutions": "数字解决方案"
+    }
+  },
+  "footer": {
+    "title": "聊聊你的项目吧。",
+    "description": "有项目想法？一起做出很棒的东西。我们可以把它变成真正的产品。",
+    "note": "一起把它变成现实",
+    "copyrightHtml": "© Meeko by <a class=\"footer__source\" href=\"https://framer.link/a3IT8z9\" target=\"_blank\" rel=\"noopener\">elemis</a>. Powered by Framer."
+  }
+}

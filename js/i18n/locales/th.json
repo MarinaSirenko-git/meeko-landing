@@ -1,0 +1,188 @@
+{
+  "meta": {
+    "title": "Meeko",
+    "description": "Meeko — แลนดิ้งเพจสตูดิโอครีเอทีฟ: บริการ ผลงาน เกี่ยวกับเรา และติดต่อ"
+  },
+  "common": {
+    "brand": "Meeko",
+    "skipToContent": "ข้ามไปยังเนื้อหาหลัก",
+    "works": "ผลงาน",
+    "about": "เกี่ยวกับ",
+    "contact": "ติดต่อ",
+    "viewProject": "ดูโปรเจกต์",
+    "learnMore": "เรียนรู้เพิ่มเติม",
+    "getInTouch": "ติดต่อเรา",
+    "portfolio": "พอร์ตโฟลิโอ",
+    "aboutMe": "เกี่ยวกับฉัน",
+    "contactMe": "ติดต่อฉัน",
+    "menu": "เมนู",
+    "openMenu": "เปิดเมนู",
+    "closeMenu": "ปิดเมนู"
+  },
+  "nav": {
+    "main": "เมนูหลัก",
+    "mobile": "เมนูมือถือ",
+    "social": "ลิงก์โซเชียล",
+    "footer": "ลิงก์ส่วนท้าย",
+    "worksAria": "ผลงาน",
+    "aboutAria": "เกี่ยวกับ",
+    "contactAria": "ติดต่อ",
+    "x": "X",
+    "dribbble": "Dribbble",
+    "instagram": "Instagram"
+  },
+  "locale": {
+    "label": "ภาษา",
+    "en": "EN",
+    "ru": "RU",
+    "th": "TH",
+    "zhHans": "中文"
+  },
+  "hero": {
+    "webDevelopment": "พัฒนาเว็บไซต์",
+    "noCodeDesign": "ออกแบบ No-code",
+    "hello": "สวัสดี!",
+    "intro": "ฉันคือ Meeko",
+    "role": "นักออกแบบผลิตภัณฑ์",
+    "description": "ฉันเชี่ยวชาญด้าน <strong>HTML</strong> <strong>CSS</strong> <strong>WordPress</strong> และ <strong>Framer</strong> พร้อมประสบการณ์ยาวนานในการแปลงดีไซน์ให้เป็นเว็บไซต์ที่ตอบสนองทุกอุปกรณ์",
+    "cardsAria": "หน้าเด่น",
+    "portfolioTitle": "พอร์ตโฟลิโอของฉัน",
+    "portfolioDescription": "สำรวจโปรเจกต์ที่คัดสรรและแนวทางการออกแบบของฉัน",
+    "aboutTitle": "เกี่ยวกับฉัน",
+    "aboutDescription": "มุมมองใกล้ชิดเกี่ยวกับประสบการณ์ ทักษะ และเส้นทางสร้างสรรค์ของฉัน",
+    "contactTitle": "ติดต่อฉัน",
+    "contactDescription": "มาร่วมกันทำให้ไอเดียและวิสัยทัศน์ของคุณเป็นจริง"
+  },
+  "works": {
+    "title": "ผลงานที่คัดสรร",
+    "description": "ด้วยสายตาที่แม่นยำและการคิดเชิงวิพากษ์ ฉันเชี่ยวชาญในการสร้าง <strong>เว็บไซต์</strong> <strong>ผลิตภัณฑ์</strong> และ <strong>ประสบการณ์</strong> ที่น่าจดจำ",
+    "bigShake": {
+      "eyebrow": "Brand design, Framer",
+      "title": "The Big Shake",
+      "description": "งานนี้สร้างบนความชัดเจนและความสม่ำเสมอ กำหนดอัตลักษณ์ภาพที่ refined ด้วยสุนทรียศาสตร์ร่วมสมัยและการสื่อสารแบรนด์ที่กลมกลืนตลอดทั้งโปรเจกต์",
+      "imageAlt": "ตัวอย่างโปรเจกต์ The Big Shake"
+    },
+    "transparentThings": {
+      "eyebrow": "Web design, Typography",
+      "title": "Transparent Things",
+      "description": "เน้นความแม่นยำและโครงสร้าง งานนี้ผสานความชัดเจนกับสุนทรียศาสตร์ร่วมสมัยภายในกรอบระบบภาพที่สอดคล้องกัน",
+      "imageAlt": "ตัวอย่างโปรเจกต์ Transparent Things"
+    },
+    "phantomLimb": {
+      "eyebrow": "Logo design, WordPress",
+      "title": "Phantom Limb",
+      "description": "ผสานความชัดเจนกับการคิดเชิงดีไซน์ร่วมสมัย โปรเจกต์นี้ส่งมอบอัตลักษณ์ภาพที่พิถีพิถันพร้อมความสอดคล้องของแบรนด์ที่แข็งแกร่ง",
+      "imageAlt": "ตัวอย่างโปรเจกต์ Phantom Limb"
+    },
+    "heatLightning": {
+      "eyebrow": "Webflow, UX design",
+      "title": "Heat Lightning",
+      "description": "โปรเจกต์นี้ขับเคลื่อนด้วยแนวทางดีไซน์ที่ refined สมดุลระหว่างความชัดเจนและเจตนา กับภาพร่วมสมัยและความกลมกลืนของแบรนด์โดยรวม",
+      "imageAlt": "ตัวอย่างโปรเจกต์ Heat Lightning"
+    }
+  },
+  "testimonials": {
+    "title": "คำรับรอง",
+    "choose": "เลือกคำรับรอง",
+    "natalie": {
+      "quote": "“ตั้งแต่เริ่มต้น การทำงานร่วมกันราบรื่นมาก ทุกไอเดียถูกขัดเกลาให้มีความหมาย และผลลัพธ์สุดท้ายตรงกับที่เราหวังไว้พอดี”",
+      "name": "เนทาลี บรู๊คส์",
+      "role": "ผู้จัดการฝ่ายการตลาด",
+      "avatarAlt": "เนทาลี บรู๊คส์"
+    },
+    "daniel": {
+      "quote": "“ฉันเคยทำงานกับดีไซน์เนอร์หลายคน แต่ประสบการณ์ครั้งนี้อยู่ในอีกระดับ ความใส่ใจในรายละเอียดและแนวทางที่รอบคอบทำให้กระบวนการลื่นไหลและสนุก”",
+      "name": "แดเนียล ฟอสเตอร์",
+      "role": "ผู้ก่อตั้งสตาร์ทอัพ",
+      "avatarAlt": "แดเนียล ฟอสเตอร์"
+    },
+    "ethan": {
+      "quote": "“ตอนแรกฉันไม่แน่ใจว่าจะเป็นอย่างไร แต่ทุกอย่างออกมาดีกว่าที่คาด การสื่อสารชัดเจน ตรงเวลา และผลงานสุดท้ายดูทันสมัย”",
+      "name": "อีธาน คอลเดลล์",
+      "role": "ผู้อำนวยการฝ่ายผลิตภัณฑ์",
+      "avatarAlt": "อีธาน คอลเดลล์"
+    }
+  },
+  "process": {
+    "title": "งานคุณภาพสูงที่คำนึงถึงคุณค่าที่แท้จริง",
+    "description": "กระบวนการทำงานของฉันมุ่งสู่การเพิ่ม productivity และความคิดสร้างสรรค์อย่างมีเป้าหมายชัดเจน เริ่มจากการวิจัยและวางแผนอย่างละเอียด รวบรวมข้อมูลที่เกี่ยวข้องและกำหนดเป้าหมายหลัก",
+    "step01": {
+      "number": "(01)",
+      "title": "กำหนดกรอบปัญหา",
+      "description": "ฉันสำรวจ insight และบริบทตลาดเพื่อกำหนดปัญหาให้ชัดเจน ผลการวิจัยถูกแปลงเป็นไอเดียที่กำหนดทิศทาง สนับสนุนการตัดสินใจ และวางรากฐานที่แข็งแกร่งให้โปรเจกต์"
+    },
+    "step02": {
+      "number": "(02)",
+      "title": "ขึ้นรูปไอเดีย",
+      "description": "ขั้นนี้ฉันขัดเกลาไอเดียเริ่มต้นให้เป็นคอนเซปต์ที่ชัดเจน โดยจัดให้กลยุทธ์และความคิดสร้างสรรค์สอดคล้องกัน พัฒนาทิศทางโครงสร้างที่สมดุลระหว่างนวัตกรรมกับความเป็นไปได้ สนับสนุนทั้งเป้าหมายแบรนด์และความคาดหวังของผู้ใช้"
+    },
+    "step03": {
+      "number": "(03)",
+      "title": "ทดสอบประสบการณ์",
+      "description": "ในเฟสนี้ฉันทำให้คอนcept มีชีวิตผ่าน prototyping และการทดสอบจริง ตรวจสอบการทำงาน ความใช้งาน และความชัดเจน โดย iterate จาก feedback และแก้ไขรายละเอียดก่อนส่งมอบ"
+    },
+    "step04": {
+      "number": "(04)",
+      "title": "ขัดเกลาผลลัพธ์",
+      "description": "ในขั้นตอนสุดท้ายของดีไซน์ ให้ความสำคัญกับการ refine ผลิตภัณฑ์ให้ตรงมาตรฐานคุณภาพและการใช้งานสูง ผ่านการทดสอบ ปรับแต่ง และ iterate เพื่อแก้ปัญหาที่เหลือ"
+    }
+  },
+  "stats": {
+    "title": "ตัวเลขพูดแทนฉัน",
+    "description": "ตัวเลขเหล่านี้สะท้อน <strong>ประสบการณ์</strong> <strong>ความสม่ำเสมอ</strong> และผลกระทบที่วัดได้จากงานที่ฉันส่งมอบตลอดหลายปี",
+    "satisfiedCustomers": "ลูกค้าพึงพอใจ",
+    "yearsExperience": "ปีประสบการณ์ทำงาน",
+    "projectsDone": "โปรเจกต์สำเร็จ",
+    "awardsReceived": "รางวัลดีไซน์",
+    "travelledCountry": "เมืองที่เดินทางทั่วประเทศ"
+  },
+  "about": {
+    "badgeText": "– พร้อมรับงาน – FREELANCE",
+    "title": "เฮ้! นี่คือฉัน",
+    "paragraph1": "ฉันคือ Meeko ดีไซน์เนอร์หลายสาขาและบล็อกเกอร์ที่อาศัยใน Los Angeles ด้วยสายตาที่เฉียบคมต่อสุนทรียศาสตร์และทักษะในการหาโซลูชันใหม่ ๆ ฉันเติบโตในจุดตัดของการออกแบบ",
+    "paragraph2": "เส้นทางของฉันในสาขาที่เปลี่ยนแปลงตลอดเวลานี้สะท้อนความหลงใหลในการสร้าง user experience ที่มีความหมาย ใช้เทคโนโลยีล้ำสมัย และขยายขอบเขตความคิดสร้างสรรค์ดิจิทัลอย่างไม่หยุดยั้ง",
+    "capabilitiesTitle": "ความสามารถของฉัน",
+    "capabilitiesLead": "บริการที่ฉันนำเสนอถูกออกแบบอย่างพิถีพิถันและปรับให้ตรงกับ <strong>ความต้องการเฉพาะ</strong> และ <strong>ข้อกำหนด</strong> ของคุณ",
+    "skills": {
+      "uiDesign": {
+        "name": "UI Design",
+        "ariaLabel": "UI Design: 95%"
+      },
+      "webDesign": {
+        "name": "Web Design",
+        "ariaLabel": "Web Design: 97%"
+      },
+      "framer": {
+        "name": "Framer",
+        "ariaLabel": "Framer: 85%"
+      },
+      "wordpress": {
+        "name": "Wordpress",
+        "ariaLabel": "Wordpress: 80%"
+      },
+      "photoshop": {
+        "name": "Photoshop",
+        "ariaLabel": "Photoshop: 90%"
+      },
+      "illustration": {
+        "name": "Illustration",
+        "ariaLabel": "Illustration: 65%"
+      }
+    },
+    "tags": {
+      "mobileDesign": "Mobile Design",
+      "uxProductDesign": "UX & Product Design",
+      "identityBranding": "Identity & Branding",
+      "illustration": "Illustration",
+      "webDevelopment": "พัฒนาเว็บไซต์",
+      "shopifyIntegration": "Shopify Integration",
+      "digitalSolutions": "โซลูชันดิจิทัล"
+    }
+  },
+  "footer": {
+    "title": "มาคุยเรื่องโปรเจกต์ของคุณ",
+    "description": "มีโปรเจกต์ในใจอยู่ไหม มาสร้างสิ่งดี ๆ ด้วยกัน เราสามารถเปลี่ยนไอเดียนั้นให้เป็นผลิตภัณฑ์จริง",
+    "note": "และทำให้เป็นจริงด้วยกัน",
+    "copyrightHtml": "© Meeko by <a class=\"footer__source\" href=\"https://framer.link/a3IT8z9\" target=\"_blank\" rel=\"noopener\">elemis</a>. Powered by Framer."
+  }
+}

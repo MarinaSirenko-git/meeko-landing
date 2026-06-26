@@ -1,0 +1,188 @@
+{
+  "meta": {
+    "title": "Meeko",
+    "description": "Meeko — creative studio landing: services, work, about, and contact."
+  },
+  "common": {
+    "brand": "Meeko",
+    "skipToContent": "Skip to main content",
+    "works": "Works",
+    "about": "About",
+    "contact": "Contact",
+    "viewProject": "View Project",
+    "learnMore": "Learn More",
+    "getInTouch": "Get in Touch",
+    "portfolio": "Portfolio",
+    "aboutMe": "About Me",
+    "contactMe": "Contact Me",
+    "menu": "Menu",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "nav": {
+    "main": "Main navigation",
+    "mobile": "Mobile navigation",
+    "social": "Social links",
+    "footer": "Footer links",
+    "worksAria": "Work",
+    "aboutAria": "About",
+    "contactAria": "Contact",
+    "x": "X",
+    "dribbble": "Dribbble",
+    "instagram": "Instagram"
+  },
+  "locale": {
+    "label": "Language",
+    "en": "EN",
+    "ru": "RU",
+    "th": "TH",
+    "zhHans": "中文"
+  },
+  "hero": {
+    "webDevelopment": "Web Development",
+    "noCodeDesign": "No-code Design",
+    "hello": "Hello!",
+    "intro": "I'm Meeko,",
+    "role": "a product designer.",
+    "description": "I specialize in <strong>HTML</strong>, <strong>CSS</strong>, <strong>WordPress</strong>, and <strong>Framer</strong>, with a strong track record of converting designs into responsive websites.",
+    "cardsAria": "Featured pages",
+    "portfolioTitle": "My Portfolio",
+    "portfolioDescription": "Explore selected projects and my approach to design.",
+    "aboutTitle": "About Me",
+    "aboutDescription": "A closer look at my background, skills, and creative journey.",
+    "contactTitle": "Contact Me",
+    "contactDescription": "Let's work together to bring your ideas and vision to life."
+  },
+  "works": {
+    "title": "My selected works",
+    "description": "With my keen eye for detail and sharp critical thinking skills, I specialize in crafting captivating <strong>websites</strong>, <strong>products</strong>, and <strong>experiences</strong>.",
+    "bigShake": {
+      "eyebrow": "Brand design, Framer",
+      "title": "The Big Shake",
+      "description": "Built around clarity and consistency, this work defines a refined visual identity shaped by modern aesthetics and cohesive brand expression throughout.",
+      "imageAlt": "Preview of The Big Shake project"
+    },
+    "transparentThings": {
+      "eyebrow": "Web design, Typography",
+      "title": "Transparent Things",
+      "description": "With an emphasis on precision and structure, this work brings clarity and modern aesthetics together within a consistent visual system framework.",
+      "imageAlt": "Preview of Transparent Things project"
+    },
+    "phantomLimb": {
+      "eyebrow": "Logo design, WordPress",
+      "title": "Phantom Limb",
+      "description": "By combining clarity with contemporary design thinking, the project delivers a considered visual identity with strong and consistent brand alignment.",
+      "imageAlt": "Preview of Phantom Limb project"
+    },
+    "heatLightning": {
+      "eyebrow": "Webflow, UX design",
+      "title": "Heat Lightning",
+      "description": "This project is driven by a refined design approach that balances clarity and intention with contemporary visuals and overall cohesive brand harmony.",
+      "imageAlt": "Preview of Heat Lightning project"
+    }
+  },
+  "testimonials": {
+    "title": "Testimonials",
+    "choose": "Choose testimonial",
+    "natalie": {
+      "quote": "“From the very beginning, the collaboration felt effortless. Every idea was carefully refined into something meaningful, and the final result was exactly what we hoped for.”",
+      "name": "Natalie Brooks",
+      "role": "Marketing Manager",
+      "avatarAlt": "Natalie Brooks"
+    },
+    "daniel": {
+      "quote": "“I've worked with many designers before, but this experience was on another level. The attention to detail and thoughtful approach made the process smooth and enjoyable.”",
+      "name": "Daniel Foster",
+      "role": "Startup Founder",
+      "avatarAlt": "Daniel Foster"
+    },
+    "ethan": {
+      "quote": "“I wasn't sure what to expect at first, but everything turned out better than expected. Communication was clear, timelines were respected, and the final result felt modern.”",
+      "name": "Ethan Caldwell",
+      "role": "Product Director",
+      "avatarAlt": "Ethan Caldwell"
+    }
+  },
+  "process": {
+    "title": "High-quality work with real value considered.",
+    "description": "My working process revolves around an approach aimed at maximizing productivity and creativity with clarity and focus. It begins with thorough research and planning, where I gather relevant information and outline key objectives.",
+    "step01": {
+      "number": "(01)",
+      "title": "Problem Framing",
+      "description": "I explore insights, and market context to clearly define the problem. Research findings are translated into ideas that shape direction, inform decisions, and establish a strong foundation for the project."
+    },
+    "step02": {
+      "number": "(02)",
+      "title": "Shaping the Idea",
+      "description": "Here, I refine initial ideas into clear concepts by aligning strategy and creativity. I develop structural directions that balance innovation with feasibility, while supporting both brand goals and user expectations."
+    },
+    "step03": {
+      "number": "(03)",
+      "title": "Testing the Experience",
+      "description": "In this phase, I bring concepts to life through prototyping and real-world testing. I validate functionality, usability, and clarity by iterating on feedback, refining details, and resolving issues before final delivery."
+    },
+    "step04": {
+      "number": "(04)",
+      "title": "Polishing the Outcome",
+      "description": "In the final stage of design, thorough attention is given to refine the product, ensuring it meets high standards of quality and functionality through testing, tweaking, and iteration to address any remaining issues."
+    }
+  },
+  "stats": {
+    "title": "My numbers say it all",
+    "description": "These numbers reflect the <strong>experience</strong> and <strong>consistency</strong>, and measurable impact behind the work I've delivered over the years.",
+    "satisfiedCustomers": "Satisfied happy customers",
+    "yearsExperience": "Years of work experience",
+    "projectsDone": "Successful projects done",
+    "awardsReceived": "Design awards received",
+    "travelledCountry": "Travelled around the country"
+  },
+  "about": {
+    "badgeText": "– I AM AVAILABLE – FOR FREELANCE",
+    "title": "Hey! That's me.",
+    "paragraph1": "I am Meeko, a multidisciplinary designer and blogger based in the vibrant city of Los Angeles. With a keen eye for aesthetics and a knack for innovative solutions, I thrive in the dynamic intersection of design.",
+    "paragraph2": "My journey in this dynamic and ever-evolving field has been a testament to my unwavering passion for meticulously crafting meaningful user experiences, leveraging cutting-edge technologies, and fearlessly pushing the boundaries of digital creativity.",
+    "capabilitiesTitle": "My capabilities",
+    "capabilitiesLead": "The services I offer are meticulously crafted and tailored to cater specifically to your <strong>unique needs</strong> and <strong>requirements</strong>.",
+    "skills": {
+      "uiDesign": {
+        "name": "UI Design",
+        "ariaLabel": "UI Design: 95%"
+      },
+      "webDesign": {
+        "name": "Web Design",
+        "ariaLabel": "Web Design: 97%"
+      },
+      "framer": {
+        "name": "Framer",
+        "ariaLabel": "Framer: 85%"
+      },
+      "wordpress": {
+        "name": "Wordpress",
+        "ariaLabel": "Wordpress: 80%"
+      },
+      "photoshop": {
+        "name": "Photoshop",
+        "ariaLabel": "Photoshop: 90%"
+      },
+      "illustration": {
+        "name": "Illustration",
+        "ariaLabel": "Illustration: 65%"
+      }
+    },
+    "tags": {
+      "mobileDesign": "Mobile Design",
+      "uxProductDesign": "UX & Product Design",
+      "identityBranding": "Identity & Branding",
+      "illustration": "Illustration",
+      "webDevelopment": "Web Development",
+      "shopifyIntegration": "Shopify Integration",
+      "digitalSolutions": "Digital Solutions"
+    }
+  },
+  "footer": {
+    "title": "Let's talk about your project.",
+    "description": "Got a project in mind? Let's create something great. We can transform that idea into real product.",
+    "note": "and make it real together",
+    "copyrightHtml": "© Meeko by <a class=\"footer__source\" href=\"https://framer.link/a3IT8z9\" target=\"_blank\" rel=\"noopener\">elemis</a>. Powered by Framer."
+  }
+}

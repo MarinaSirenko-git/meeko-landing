@@ -1,4 +1,5 @@
 import gsap from "gsap";
+import { t } from "../i18n/i18n.js";
 import { prefersReducedMotion } from "../lib/motion.js";
 
 /** Mobile drawer + overlay open/close with GSAP */
@@ -10,8 +11,8 @@ export function initMobileMenu() {
 
   if (!menuToggle || !mobileMenu || !mobileMenuOverlay) return;
 
-  const openLabel = "Open menu";
-  const closeLabel = "Close menu";
+  const getOpenLabel = () => t("common.openMenu");
+  const getCloseLabel = () => t("common.closeMenu");
   const menuTweenDuration = 0.35;
   const menuTweenEase = "power2.out";
 
@@ -39,7 +40,7 @@ export function initMobileMenu() {
     mobileMenuOverlay.hidden = true;
     mobileMenuOverlay.setAttribute("aria-hidden", "true");
     menuToggle.setAttribute("aria-expanded", "false");
-    menuToggle.setAttribute("aria-label", openLabel);
+    menuToggle.setAttribute("aria-label", getOpenLabel());
     document.body.classList.remove("mobile-menu-open");
     clearMenuGsapProps();
   };
@@ -57,7 +58,7 @@ export function initMobileMenu() {
     killMenuAnimation();
     syncOpenDom();
     menuToggle.setAttribute("aria-expanded", "true");
-    menuToggle.setAttribute("aria-label", closeLabel);
+    menuToggle.setAttribute("aria-label", getCloseLabel());
     gsap.set(mobileMenu, {
       left: "50%",
       xPercent: -50,
@@ -77,7 +78,7 @@ export function initMobileMenu() {
     killMenuAnimation();
     syncOpenDom();
     menuToggle.setAttribute("aria-expanded", "true");
-    menuToggle.setAttribute("aria-label", closeLabel);
+    menuToggle.setAttribute("aria-label", getCloseLabel());
 
     gsap.set(mobileMenu, {
       left: "50%",
@@ -114,7 +115,7 @@ export function initMobileMenu() {
     killMenuAnimation();
     syncOpenDom();
     menuToggle.setAttribute("aria-expanded", "true");
-    menuToggle.setAttribute("aria-label", closeLabel);
+    menuToggle.setAttribute("aria-label", getCloseLabel());
 
     gsap.set(mobileMenu, {
       left: "50%",
@@ -190,5 +191,16 @@ export function initMobileMenu() {
     link.addEventListener("click", () => {
       setMenuOpen(false);
     });
+  });
+
+  mobileMenu.querySelectorAll("[data-locale-option]").forEach((button) => {
+    button.addEventListener("click", () => {
+      setMenuOpen(false);
+    });
+  });
+
+  document.addEventListener("localechange", () => {
+    const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+    menuToggle.setAttribute("aria-label", isOpen ? getCloseLabel() : getOpenLabel());
   });
 }

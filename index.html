@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="js">
   <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -8,9 +8,7 @@
       content="Meeko — creative studio landing: services, work, about, and contact."
     />
     <title>Meeko</title>
-    <script>
-      document.documentElement.classList.add("js");
-    </script>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
     <link
       rel="preload"
       href="/assets/fonts/UncutSans-Variable.woff2"
@@ -18,26 +16,28 @@
       type="font/woff2"
       crossorigin
     />
+    <link rel="stylesheet" href="/css/fonts.css"/>
     <link rel="stylesheet" href="/css/styles.css"/>
   </head>
   <body>
-    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <a class="skip-link" href="#main-content" data-i18n="common.skipToContent">Skip to main content</a>
     <header class="header layout">
       <div class="header__inner">
-        <a class="header__logo" href="/">Meeko</a>
+        <a class="header__logo" href="/" data-i18n="common.brand">Meeko</a>
 
-        <nav class="header__nav" aria-label="Main navigation">
+        <nav class="header__nav" data-i18n-aria-label="nav.main" aria-label="Main navigation">
           <ul class="header__nav-list">
             <li class="header__nav-item">
               <a
                 class="header__nav-link roll-link"
                 href="#works"
+                data-i18n-aria-label="nav.worksAria"
                 aria-label="Work"
               >
                 <span class="roll-link__mask" aria-hidden="true">
                   <span class="roll-link__track">
-                    <span class="roll-link__text">Works</span>
-                    <span class="roll-link__text">Works</span>
+                    <span class="roll-link__text" data-i18n="common.works">Works</span>
+                    <span class="roll-link__text" data-i18n="common.works">Works</span>
                   </span>
                 </span>
               </a>
@@ -46,12 +46,13 @@
               <a
                 class="header__nav-link roll-link"
                 href="#about"
+                data-i18n-aria-label="nav.aboutAria"
                 aria-label="About"
               >
                 <span class="roll-link__mask" aria-hidden="true">
                   <span class="roll-link__track">
-                    <span class="roll-link__text">About</span>
-                    <span class="roll-link__text">About</span>
+                    <span class="roll-link__text" data-i18n="common.about">About</span>
+                    <span class="roll-link__text" data-i18n="common.about">About</span>
                   </span>
                 </span>
               </a>
@@ -60,12 +61,13 @@
               <a
                 class="header__nav-link roll-link"
                 href="#footer"
+                data-i18n-aria-label="nav.contactAria"
                 aria-label="Contact"
               >
                 <span class="roll-link__mask" aria-hidden="true">
                   <span class="roll-link__track">
-                    <span class="roll-link__text">Contact</span>
-                    <span class="roll-link__text">Contact</span>
+                    <span class="roll-link__text" data-i18n="common.contact">Contact</span>
+                    <span class="roll-link__text" data-i18n="common.contact">Contact</span>
                   </span>
                 </span>
               </a>
@@ -73,10 +75,10 @@
           </ul>
         </nav>
 
-        <nav class="header__social" aria-label="Social links">
+        <nav class="header__social" data-i18n-aria-label="nav.social" aria-label="Social links">
           <ul class="header__social-list">
             <li class="header__social-item">
-              <a class="header__social-link" href="#" aria-label="X">
+              <a class="header__social-link" href="#" data-i18n-aria-label="nav.x" aria-label="X">
                 <img
                   class="header__social-icon"
                   src="/assets/icons/nav/x.svg"
@@ -87,7 +89,7 @@
               </a>
             </li>
             <li class="header__social-item">
-              <a class="header__social-link" href="#" aria-label="Dribbble">
+              <a class="header__social-link" href="#" data-i18n-aria-label="nav.dribbble" aria-label="Dribbble">
                 <img
                   class="header__social-icon"
                   src="/assets/icons/nav/dribbble.svg"
@@ -98,7 +100,7 @@
               </a>
             </li>
             <li class="header__social-item">
-              <a class="header__social-link" href="#" aria-label="Instagram">
+              <a class="header__social-link" href="#" data-i18n-aria-label="nav.instagram" aria-label="Instagram">
                 <img
                   class="header__social-icon"
                   src="/assets/icons/nav/insta.svg"
@@ -108,6 +110,72 @@
                 />
               </a>
             </li>
+            <li class="header__social-item header__social-item--locale">
+              <div class="locale-switcher" data-locale-switcher>
+                <button
+                  type="button"
+                  class="locale-switcher__trigger header__social-link"
+                  aria-haspopup="listbox"
+                  aria-expanded="false"
+                  data-i18n-aria-label="locale.label"
+                  aria-label="Language"
+                >
+                  <img
+                    class="header__social-icon"
+                    src="/assets/icons/nav/globe.svg"
+                    width="24"
+                    height="24"
+                    alt=""
+                  />
+                </button>
+                <ul class="locale-switcher__menu" role="listbox" hidden>
+                  <li class="locale-switcher__menu-item" role="presentation">
+                    <button
+                      type="button"
+                      class="locale-switcher__option"
+                      role="option"
+                      data-locale-option="en"
+                      aria-selected="false"
+                    >
+                      <span data-i18n="locale.en">EN</span>
+                    </button>
+                  </li>
+                  <li class="locale-switcher__menu-item" role="presentation">
+                    <button
+                      type="button"
+                      class="locale-switcher__option"
+                      role="option"
+                      data-locale-option="ru"
+                      aria-selected="false"
+                    >
+                      <span data-i18n="locale.ru">RU</span>
+                    </button>
+                  </li>
+                  <li class="locale-switcher__menu-item" role="presentation">
+                    <button
+                      type="button"
+                      class="locale-switcher__option"
+                      role="option"
+                      data-locale-option="th"
+                      aria-selected="false"
+                    >
+                      <span data-i18n="locale.th">TH</span>
+                    </button>
+                  </li>
+                  <li class="locale-switcher__menu-item" role="presentation">
+                    <button
+                      type="button"
+                      class="locale-switcher__option"
+                      role="option"
+                      data-locale-option="zh-Hans"
+                      aria-selected="false"
+                    >
+                      <span data-i18n="locale.zhHans">中文</span>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </li>
           </ul>
         </nav>
 
@@ -116,6 +184,7 @@
           class="header__menu-toggle"
           aria-controls="mobile-menu"
           aria-expanded="false"
+          data-i18n-aria-label="common.menu"
           aria-label="Menu"
         >
           <span class="header__menu-toggle-icon" aria-hidden="true">
@@ -138,19 +207,72 @@
     ></div>
 
     <div class="mobile-menu layout" id="mobile-menu" hidden>
-      <nav class="mobile-menu__nav" aria-label="Mobile navigation">
+      <nav class="mobile-menu__nav" data-i18n-aria-label="nav.mobile" aria-label="Mobile navigation">
         <ul class="mobile-menu__list">
           <li class="mobile-menu__item">
-            <a class="mobile-menu__link" href="#works">Works</a>
+            <a class="mobile-menu__link" href="#works" data-i18n="common.works">Works</a>
           </li>
           <li class="mobile-menu__item">
-            <a class="mobile-menu__link" href="#about">About</a>
+            <a class="mobile-menu__link" href="#about" data-i18n="common.about">About</a>
           </li>
           <li class="mobile-menu__item">
-            <a class="mobile-menu__link" href="#footer">Contact</a>
+            <a class="mobile-menu__link" href="#footer" data-i18n="common.contact">Contact</a>
           </li>
         </ul>
       </nav>
+      <div class="mobile-menu__locale" data-locale-switcher-mobile>
+        <ul
+          class="mobile-menu__locale-list"
+          role="listbox"
+          data-i18n-aria-label="locale.label"
+          aria-label="Language"
+        >
+          <li class="mobile-menu__locale-item" role="presentation">
+            <button
+              type="button"
+              class="mobile-menu__locale-option"
+              role="option"
+              data-locale-option="en"
+              aria-selected="false"
+            >
+              <span data-i18n="locale.en">EN</span>
+            </button>
+          </li>
+          <li class="mobile-menu__locale-item" role="presentation">
+            <button
+              type="button"
+              class="mobile-menu__locale-option"
+              role="option"
+              data-locale-option="ru"
+              aria-selected="false"
+            >
+              <span data-i18n="locale.ru">RU</span>
+            </button>
+          </li>
+          <li class="mobile-menu__locale-item" role="presentation">
+            <button
+              type="button"
+              class="mobile-menu__locale-option"
+              role="option"
+              data-locale-option="th"
+              aria-selected="false"
+            >
+              <span data-i18n="locale.th">TH</span>
+            </button>
+          </li>
+          <li class="mobile-menu__locale-item" role="presentation">
+            <button
+              type="button"
+              class="mobile-menu__locale-option"
+              role="option"
+              data-locale-option="zh-Hans"
+              aria-selected="false"
+            >
+              <span data-i18n="locale.zhHans">中文</span>
+            </button>
+          </li>
+        </ul>
+      </div>
     </div>
 
     <main id="main-content">
@@ -158,7 +280,7 @@
         <div class="hero__container layout">
           <div class="hero__decorations" aria-hidden="true">
             <div class="hero__decoration hero__decoration--web">
-              <span class="hero__decoration-label">Web Development</span>
+              <span class="hero__decoration-label" data-i18n="hero.webDevelopment">Web Development</span>
             </div>
             <div class="hero__decoration hero__decoration--pen">
               <img
@@ -175,7 +297,7 @@
               />
             </div>
             <div class="hero__decoration hero__decoration--no-code">
-              <span class="hero__decoration-label">No-code Design</span>
+              <span class="hero__decoration-label" data-i18n="hero.noCodeDesign">No-code Design</span>
             </div>
           </div>
 
@@ -183,6 +305,7 @@
             <h1 class="hero__title" id="hero-title">
               <span
                 class="hero__title-part hero__title-part--hello hide-mobile-element"
+                data-i18n="hero.hello"
               >
                 Hello!
               </span>
@@ -230,14 +353,14 @@
                   />
                 </picture>
               </span>
-              <span class="hero__title-part hero__title-part--intro">
+              <span class="hero__title-part hero__title-part--intro" data-i18n="hero.intro">
                 I'm Meeko,
               </span>
-              <span class="hero__title-part hero__title-part--role">
+              <span class="hero__title-part hero__title-part--role" data-i18n="hero.role">
                 a product designer.
               </span>
             </h1>
-            <p class="hero__description">
+            <p class="hero__description" data-i18n-html="hero.description">
               I specialize in
               <strong>HTML</strong>, <strong>CSS</strong>,
               <strong>WordPress</strong>, and <strong>Framer</strong>, with a
@@ -247,7 +370,7 @@
           </div>
         </div>
 
-        <nav class="hero__cards layout" aria-label="Featured pages">
+        <nav class="hero__cards layout" data-i18n-aria-label="hero.cardsAria" aria-label="Featured pages">
           <a class="hero-card" href="#works">
             <img
               class="hero-card__icon"
@@ -258,8 +381,8 @@
               decoding="async"
             />
             <span class="hero-card__content">
-              <span class="hero-card__title">My Portfolio</span>
-              <span class="hero-card__description">
+              <span class="hero-card__title" data-i18n="hero.portfolioTitle">My Portfolio</span>
+              <span class="hero-card__description" data-i18n="hero.portfolioDescription">
                 Explore selected projects and my approach to design.
               </span>
             </span>
@@ -280,8 +403,8 @@
               decoding="async"
             />
             <span class="hero-card__content">
-              <span class="hero-card__title">About Me</span>
-              <span class="hero-card__description">
+              <span class="hero-card__title" data-i18n="hero.aboutTitle">About Me</span>
+              <span class="hero-card__description" data-i18n="hero.aboutDescription">
                 A closer look at my background, skills, and creative journey.
               </span>
             </span>
@@ -302,8 +425,8 @@
               decoding="async"
             />
             <span class="hero-card__content">
-              <span class="hero-card__title">Contact Me</span>
-              <span class="hero-card__description">
+              <span class="hero-card__title" data-i18n="hero.contactTitle">Contact Me</span>
+              <span class="hero-card__description" data-i18n="hero.contactDescription">
                 Let's work together to bring your ideas and vision to life.
               </span>
             </span>
@@ -320,8 +443,8 @@
       <section class="works" id="works" aria-labelledby="works-title">
         <div class="works__container layout">
           <div class="works__header">
-            <h2 class="works__title" id="works-title">My selected works</h2>
-            <p class="works__description">
+            <h2 class="works__title" id="works-title" data-i18n="works.title">My selected works</h2>
+            <p class="works__description" data-i18n-html="works.description">
               With my keen eye for detail and sharp critical thinking skills, I
               specialize in crafting captivating
               <strong>websites</strong>, <strong>products</strong>, and
@@ -331,9 +454,9 @@
           <div class="works__wrapper">
             <article class="works-card">
               <div class="works-card__content">
-                <p class="works-card__eyebrow">Brand design, Framer</p>
-                <h3 class="works-card__title">The Big Shake</h3>
-                <p class="works-card__description">
+                <p class="works-card__eyebrow" data-i18n="works.bigShake.eyebrow">Brand design, Framer</p>
+                <h3 class="works-card__title" data-i18n="works.bigShake.title">The Big Shake</h3>
+                <p class="works-card__description" data-i18n="works.bigShake.description">
                   Built around clarity and consistency, this work defines a
                   refined visual identity shaped by modern aesthetics and
                   cohesive brand expression throughout.
@@ -341,12 +464,13 @@
                 <a
                   class="works-card__link roll-link"
                   href="#contact"
+                  data-i18n-aria-label="common.viewProject"
                   aria-label="View Project"
                 >
                   <span class="roll-link__mask" aria-hidden="true">
                     <span class="roll-link__track">
-                      <span class="roll-link__text">View Project</span>
-                      <span class="roll-link__text">View Project</span>
+                      <span class="roll-link__text" data-i18n="common.viewProject">View Project</span>
+                      <span class="roll-link__text" data-i18n="common.viewProject">View Project</span>
                     </span>
                   </span>
                 </a>
@@ -363,6 +487,7 @@
                     src="/assets/images/works/big_snake.jpg"
                     width="1200"
                     height="880"
+                    data-i18n-alt="works.bigShake.imageAlt"
                     alt="Preview of The Big Shake project"
                     loading="lazy"
                     decoding="async"
@@ -373,9 +498,9 @@
 
             <article class="works-card">
               <div class="works-card__content">
-                <p class="works-card__eyebrow">Web design, Typography</p>
-                <h3 class="works-card__title">Transparent Things</h3>
-                <p class="works-card__description">
+                <p class="works-card__eyebrow" data-i18n="works.transparentThings.eyebrow">Web design, Typography</p>
+                <h3 class="works-card__title" data-i18n="works.transparentThings.title">Transparent Things</h3>
+                <p class="works-card__description" data-i18n="works.transparentThings.description">
                   With an emphasis on precision and structure, this work
                   brings clarity and modern aesthetics together within a
                   consistent visual system framework.
@@ -383,12 +508,13 @@
                 <a
                   class="works-card__link roll-link"
                   href="#contact"
+                  data-i18n-aria-label="common.viewProject"
                   aria-label="View Project"
                 >
                   <span class="roll-link__mask" aria-hidden="true">
                     <span class="roll-link__track">
-                      <span class="roll-link__text">View Project</span>
-                      <span class="roll-link__text">View Project</span>
+                      <span class="roll-link__text" data-i18n="common.viewProject">View Project</span>
+                      <span class="roll-link__text" data-i18n="common.viewProject">View Project</span>
                     </span>
                   </span>
                 </a>
@@ -405,6 +531,7 @@
                     src="/assets/images/works/transparent_things.jpg"
                     width="1200"
                     height="880"
+                    data-i18n-alt="works.transparentThings.imageAlt"
                     alt="Preview of Transparent Things project"
                     loading="lazy"
                     decoding="async"
@@ -415,9 +542,9 @@
 
             <article class="works-card">
               <div class="works-card__content">
-                <p class="works-card__eyebrow">Logo design, WordPress</p>
-                <h3 class="works-card__title">Phantom Limb</h3>
-                <p class="works-card__description">
+                <p class="works-card__eyebrow" data-i18n="works.phantomLimb.eyebrow">Logo design, WordPress</p>
+                <h3 class="works-card__title" data-i18n="works.phantomLimb.title">Phantom Limb</h3>
+                <p class="works-card__description" data-i18n="works.phantomLimb.description">
                   By combining clarity with contemporary design thinking,
                   the project delivers a considered visual identity with
                   strong and consistent brand alignment.
@@ -425,12 +552,13 @@
                 <a
                   class="works-card__link roll-link"
                   href="#contact"
+                  data-i18n-aria-label="common.viewProject"
                   aria-label="View Project"
                 >
                   <span class="roll-link__mask" aria-hidden="true">
                     <span class="roll-link__track">
-                      <span class="roll-link__text">View Project</span>
-                      <span class="roll-link__text">View Project</span>
+                      <span class="roll-link__text" data-i18n="common.viewProject">View Project</span>
+                      <span class="roll-link__text" data-i18n="common.viewProject">View Project</span>
                     </span>
                   </span>
                 </a>
@@ -447,6 +575,7 @@
                     src="/assets/images/works/phantom_limb.jpg"
                     width="1200"
                     height="880"
+                    data-i18n-alt="works.phantomLimb.imageAlt"
                     alt="Preview of Phantom Limb project"
                     loading="lazy"
                     decoding="async"
@@ -457,9 +586,9 @@
 
             <article class="works-card">
               <div class="works-card__content">
-                <p class="works-card__eyebrow">Webflow, UX design</p>
-                <h3 class="works-card__title">Heat Lightning</h3>
-                <p class="works-card__description">
+                <p class="works-card__eyebrow" data-i18n="works.heatLightning.eyebrow">Webflow, UX design</p>
+                <h3 class="works-card__title" data-i18n="works.heatLightning.title">Heat Lightning</h3>
+                <p class="works-card__description" data-i18n="works.heatLightning.description">
                   This project is driven by a refined design approach that
                   balances clarity and intention with contemporary visuals
                   and overall cohesive brand harmony.
@@ -467,12 +596,13 @@
                 <a
                   class="works-card__link roll-link"
                   href="#contact"
+                  data-i18n-aria-label="common.viewProject"
                   aria-label="View Project"
                 >
                   <span class="roll-link__mask" aria-hidden="true">
                     <span class="roll-link__track">
-                      <span class="roll-link__text">View Project</span>
-                      <span class="roll-link__text">View Project</span>
+                      <span class="roll-link__text" data-i18n="common.viewProject">View Project</span>
+                      <span class="roll-link__text" data-i18n="common.viewProject">View Project</span>
                     </span>
                   </span>
                 </a>
@@ -489,6 +619,7 @@
                     src="/assets/images/works/heat_lightning.jpg"
                     width="1200"
                     height="880"
+                    data-i18n-alt="works.heatLightning.imageAlt"
                     alt="Preview of Heat Lightning project"
                     loading="lazy"
                     decoding="async"
@@ -505,7 +636,7 @@
         aria-labelledby="testimonials-title"
       >
         <div class="testimonials__container layout">
-          <h2 class="testimonials__title" id="testimonials-title">
+          <h2 class="testimonials__title" id="testimonials-title" data-i18n="testimonials.title">
             Testimonials
           </h2>
 
@@ -523,14 +654,14 @@
                 alt=""
                 decoding="async"
               />
-              <blockquote class="testimonials__quote">
+              <blockquote class="testimonials__quote" data-i18n="testimonials.natalie.quote">
                 “From the very beginning, the collaboration felt effortless.
                 Every idea was carefully refined into something meaningful, and
                 the final result was exactly what we hoped for.”
               </blockquote>
               <footer class="testimonials__author">
-                <cite class="testimonials__author-name">Natalie Brooks</cite>
-                <span class="testimonials__author-role">Marketing Manager</span>
+                <cite class="testimonials__author-name" data-i18n="testimonials.natalie.name">Natalie Brooks</cite>
+                <span class="testimonials__author-role" data-i18n="testimonials.natalie.role">Marketing Manager</span>
               </footer>
             </article>
 
@@ -548,14 +679,14 @@
                 alt=""
                 decoding="async"
               />
-              <blockquote class="testimonials__quote">
+              <blockquote class="testimonials__quote" data-i18n="testimonials.daniel.quote">
                 “I’ve worked with many designers before, but this experience was
                 on another level. The attention to detail and thoughtful
                 approach made the process smooth and enjoyable.”
               </blockquote>
               <footer class="testimonials__author">
-                <cite class="testimonials__author-name">Daniel Foster</cite>
-                <span class="testimonials__author-role">Startup Founder</span>
+                <cite class="testimonials__author-name" data-i18n="testimonials.daniel.name">Daniel Foster</cite>
+                <span class="testimonials__author-role" data-i18n="testimonials.daniel.role">Startup Founder</span>
               </footer>
             </article>
 
@@ -573,14 +704,14 @@
                 alt=""
                 decoding="async"
               />
-              <blockquote class="testimonials__quote">
+              <blockquote class="testimonials__quote" data-i18n="testimonials.ethan.quote">
                 “I wasn’t sure what to expect at first, but everything turned
                 out better than expected. Communication was clear, timelines
                 were respected, and the final result felt modern.”
               </blockquote>
               <footer class="testimonials__author">
-                <cite class="testimonials__author-name">Ethan Caldwell</cite>
-                <span class="testimonials__author-role">Product Director</span>
+                <cite class="testimonials__author-name" data-i18n="testimonials.ethan.name">Ethan Caldwell</cite>
+                <span class="testimonials__author-role" data-i18n="testimonials.ethan.role">Product Director</span>
               </footer>
             </article>
           </div>
@@ -588,6 +719,7 @@
           <div
             class="testimonials__avatars"
             role="tablist"
+            data-i18n-aria-label="testimonials.choose"
             aria-label="Choose testimonial"
           >
             <button
@@ -608,6 +740,7 @@
                   src="/assets/images/testimonials/natalie.jpg"
                   width="54"
                   height="54"
+                  data-i18n-alt="testimonials.natalie.avatarAlt"
                   alt="Natalie Brooks"
                   loading="lazy"
                   decoding="async"
@@ -632,6 +765,7 @@
                   src="/assets/images/testimonials/daniel.jpg"
                   width="54"
                   height="54"
+                  data-i18n-alt="testimonials.daniel.avatarAlt"
                   alt="Daniel Foster"
                   loading="lazy"
                   decoding="async"
@@ -656,6 +790,7 @@
                   src="/assets/images/testimonials/ethan.jpg"
                   width="54"
                   height="54"
+                  data-i18n-alt="testimonials.ethan.avatarAlt"
                   alt="Ethan Caldwell"
                   loading="lazy"
                   decoding="async"
@@ -668,10 +803,10 @@
       <section class="process" id="process" aria-labelledby="process-title">
         <div class="process__container layout">
           <div class="process__info">
-            <h2 class="process__title" id="process-title">
+            <h2 class="process__title" id="process-title" data-i18n="process.title">
               High-quality work with real value considered.
             </h2>
-            <p class="process__description">
+            <p class="process__description" data-i18n="process.description">
               My working process revolves around an approach aimed at maximizing
               productivity and creativity with clarity and focus. It begins with
               thorough research and planning, where I gather relevant
@@ -680,12 +815,13 @@
             <a
               class="btn process__button roll-link"
               href="#about"
+              data-i18n-aria-label="common.learnMore"
               aria-label="Learn More"
             >
               <span class="roll-link__mask" aria-hidden="true">
                 <span class="roll-link__track">
-                  <span class="roll-link__text">Learn More</span>
-                  <span class="roll-link__text">Learn More</span>
+                  <span class="roll-link__text" data-i18n="common.learnMore">Learn More</span>
+                  <span class="roll-link__text" data-i18n="common.learnMore">Learn More</span>
                 </span>
               </span>
             </a>
@@ -704,10 +840,10 @@
                     decoding="async"
                   />
                 </div>
-                <span class="process__step-number">(01)</span>
+                <span class="process__step-number" data-i18n="process.step01.number">(01)</span>
               </div>
-              <h3 class="process__card-title">Problem Framing</h3>
-              <p class="process__card-description">
+              <h3 class="process__card-title" data-i18n="process.step01.title">Problem Framing</h3>
+              <p class="process__card-description" data-i18n="process.step01.description">
                 I explore insights, and market context to clearly define the
                 problem. Research findings are translated into ideas that shape
                 direction, inform decisions, and establish a strong foundation
@@ -727,10 +863,10 @@
                     decoding="async"
                   />
                 </div>
-                <span class="process__step-number">(02)</span>
+                <span class="process__step-number" data-i18n="process.step02.number">(02)</span>
               </div>
-              <h3 class="process__card-title">Shaping the Idea</h3>
-              <p class="process__card-description">
+              <h3 class="process__card-title" data-i18n="process.step02.title">Shaping the Idea</h3>
+              <p class="process__card-description" data-i18n="process.step02.description">
                 Here, I refine initial ideas into clear concepts by aligning
                 strategy and creativity. I develop structural directions that
                 balance innovation with feasibility, while supporting both brand
@@ -750,10 +886,10 @@
                     decoding="async"
                   />
                 </div>
-                <span class="process__step-number">(03)</span>
+                <span class="process__step-number" data-i18n="process.step03.number">(03)</span>
               </div>
-              <h3 class="process__card-title">Testing the Experience</h3>
-              <p class="process__card-description">
+              <h3 class="process__card-title" data-i18n="process.step03.title">Testing the Experience</h3>
+              <p class="process__card-description" data-i18n="process.step03.description">
                 In this phase, I bring concepts to life through prototyping and
                 real-world testing. I validate functionality, usability, and
                 clarity by iterating on feedback, refining details, and
@@ -773,10 +909,10 @@
                     decoding="async"
                   />
                 </div>
-                <span class="process__step-number">(04)</span>
+                <span class="process__step-number" data-i18n="process.step04.number">(04)</span>
               </div>
-              <h3 class="process__card-title">Polishing the Outcome</h3>
-              <p class="process__card-description">
+              <h3 class="process__card-title" data-i18n="process.step04.title">Polishing the Outcome</h3>
+              <p class="process__card-description" data-i18n="process.step04.description">
                 In the final stage of design, thorough attention is given to
                 refine the product, ensuring it meets high standards of quality
                 and functionality through testing, tweaking, and iteration to
@@ -788,8 +924,8 @@
 
         <div class="stats" role="region" aria-labelledby="stats-title">
           <div class="stats__container layout">
-            <h2 class="stats__title" id="stats-title">My numbers say it all</h2>
-            <p class="stats__description">
+            <h2 class="stats__title" id="stats-title" data-i18n="stats.title">My numbers say it all</h2>
+            <p class="stats__description" data-i18n-html="stats.description">
               These numbers reflect the
               <strong>experience</strong> and <strong>consistency</strong>, and
               measurable impact behind the work I’ve delivered over the years.
@@ -797,23 +933,23 @@
             <ul class="stats__grid">
               <li class="stats__card tilt tilt--left">
                 <span class="stats__value stats__value--coral">98%</span>
-                <span class="stats__label">Satisfied happy customers</span>
+                <span class="stats__label" data-i18n="stats.satisfiedCustomers">Satisfied happy customers</span>
               </li>
               <li class="stats__card tilt tilt--right">
                 <span class="stats__value stats__value--purple">15</span>
-                <span class="stats__label">Years of work experience</span>
+                <span class="stats__label" data-i18n="stats.yearsExperience">Years of work experience</span>
               </li>
               <li class="stats__card tilt tilt--left">
                 <span class="stats__value stats__value--blue">80+</span>
-                <span class="stats__label">Successful projects done</span>
+                <span class="stats__label" data-i18n="stats.projectsDone">Successful projects done</span>
               </li>
               <li class="stats__card tilt tilt--right">
                 <span class="stats__value stats__value--teal">10+</span>
-                <span class="stats__label">Design awards received</span>
+                <span class="stats__label" data-i18n="stats.awardsReceived">Design awards received</span>
               </li>
               <li class="stats__card tilt tilt--left">
                 <span class="stats__value stats__value--magenta">45</span>
-                <span class="stats__label">Travelled around the country</span>
+                <span class="stats__label" data-i18n="stats.travelledCountry">Travelled around the country</span>
               </li>
             </ul>
           </div>
@@ -917,7 +1053,7 @@ Z
                     fill="transparent"
                   ></path>
                   <text>
-                    <textPath class="badge__text-path" href="#badge__svg">
+                    <textPath class="badge__text-path" href="#badge__svg" data-i18n="about.badgeText">
                       – I AM AVAILABLE – FOR FREELANCE
                     </textPath>
                   </text>
@@ -935,15 +1071,15 @@ Z
             </div>
 
             <div class="about__body">
-              <h2 class="about__title" id="about-title">Hey! That’s me.</h2>
+              <h2 class="about__title" id="about-title" data-i18n="about.title">Hey! That’s me.</h2>
               <div class="about__copy">
-                <p>
+                <p data-i18n="about.paragraph1">
                   I am Meeko, a multidisciplinary designer and blogger based in
                   the vibrant city of Los Angeles. With a keen eye for
                   aesthetics and a knack for innovative solutions, I thrive in
                   the dynamic intersection of design.
                 </p>
-                <p>
+                <p data-i18n="about.paragraph2">
                   My journey in this dynamic and ever-evolving field has been a
                   testament to my unwavering passion for meticulously crafting
                   meaningful user experiences, leveraging cutting-edge
@@ -954,7 +1090,7 @@ Z
               <ul class="about__skills">
                 <li class="about__skill">
                   <div class="about__skill-head">
-                    <span class="about__skill-name">UI Design</span>
+                    <span class="about__skill-name" data-i18n="about.skills.uiDesign.name">UI Design</span>
                     <span class="about__skill-value">95%</span>
                   </div>
                   <div
@@ -963,6 +1099,7 @@ Z
                     aria-valuenow="95"
                     aria-valuemin="0"
                     aria-valuemax="100"
+                    data-i18n-aria-label="about.skills.uiDesign.ariaLabel"
                     aria-label="UI Design: 95%"
                   >
                     <div
@@ -973,7 +1110,7 @@ Z
                 </li>
                 <li class="about__skill">
                   <div class="about__skill-head">
-                    <span class="about__skill-name">Web Design</span>
+                    <span class="about__skill-name" data-i18n="about.skills.webDesign.name">Web Design</span>
                     <span class="about__skill-value">97%</span>
                   </div>
                   <div
@@ -982,6 +1119,7 @@ Z
                     aria-valuenow="97"
                     aria-valuemin="0"
                     aria-valuemax="100"
+                    data-i18n-aria-label="about.skills.webDesign.ariaLabel"
                     aria-label="Web Design: 97%"
                   >
                     <div
@@ -992,7 +1130,7 @@ Z
                 </li>
                 <li class="about__skill">
                   <div class="about__skill-head">
-                    <span class="about__skill-name">Framer</span>
+                    <span class="about__skill-name" data-i18n="about.skills.framer.name">Framer</span>
                     <span class="about__skill-value">85%</span>
                   </div>
                   <div
@@ -1001,6 +1139,7 @@ Z
                     aria-valuenow="85"
                     aria-valuemin="0"
                     aria-valuemax="100"
+                    data-i18n-aria-label="about.skills.framer.ariaLabel"
                     aria-label="Framer: 85%"
                   >
                     <div
@@ -1011,7 +1150,7 @@ Z
                 </li>
                 <li class="about__skill">
                   <div class="about__skill-head">
-                    <span class="about__skill-name">Wordpress</span>
+                    <span class="about__skill-name" data-i18n="about.skills.wordpress.name">Wordpress</span>
                     <span class="about__skill-value">80%</span>
                   </div>
                   <div
@@ -1020,6 +1159,7 @@ Z
                     aria-valuenow="80"
                     aria-valuemin="0"
                     aria-valuemax="100"
+                    data-i18n-aria-label="about.skills.wordpress.ariaLabel"
                     aria-label="Wordpress: 80%"
                   >
                     <div
@@ -1030,7 +1170,7 @@ Z
                 </li>
                 <li class="about__skill">
                   <div class="about__skill-head">
-                    <span class="about__skill-name">Photoshop</span>
+                    <span class="about__skill-name" data-i18n="about.skills.photoshop.name">Photoshop</span>
                     <span class="about__skill-value">90%</span>
                   </div>
                   <div
@@ -1039,6 +1179,7 @@ Z
                     aria-valuenow="90"
                     aria-valuemin="0"
                     aria-valuemax="100"
+                    data-i18n-aria-label="about.skills.photoshop.ariaLabel"
                     aria-label="Photoshop: 90%"
                   >
                     <div
@@ -1049,7 +1190,7 @@ Z
                 </li>
                 <li class="about__skill">
                   <div class="about__skill-head">
-                    <span class="about__skill-name">Illustration</span>
+                    <span class="about__skill-name" data-i18n="about.skills.illustration.name">Illustration</span>
                     <span class="about__skill-value">65%</span>
                   </div>
                   <div
@@ -1058,6 +1199,7 @@ Z
                     aria-valuenow="65"
                     aria-valuemin="0"
                     aria-valuemax="100"
+                    data-i18n-aria-label="about.skills.illustration.ariaLabel"
                     aria-label="Illustration: 65%"
                   >
                     <div
@@ -1073,10 +1215,10 @@ Z
             class="about__capabilities"
             aria-labelledby="about-capabilities-title"
           >
-            <h3 class="about__capabilities-title" id="about-capabilities-title">
+            <h3 class="about__capabilities-title" id="about-capabilities-title" data-i18n="about.capabilitiesTitle">
               My capabilities
             </h3>
-            <p class="about__capabilities-lead">
+            <p class="about__capabilities-lead" data-i18n-html="about.capabilitiesLead">
               The services I offer are meticulously crafted and tailored to
               cater specifically to your <strong>unique needs</strong> and
               <strong>requirements</strong>.
@@ -1092,7 +1234,7 @@ Z
                   decoding="async"
                   aria-hidden="true"
                 />
-                <h3 class="about__tag-text">Mobile Design</h3>
+                <h3 class="about__tag-text" data-i18n="about.tags.mobileDesign">Mobile Design</h3>
               </li>
               <li class="about__tag tilt tilt--right">
                 <img
@@ -1104,7 +1246,7 @@ Z
                   decoding="async"
                   aria-hidden="true"
                 />
-                <h3 class="about__tag-text">UX &amp; Product Design</h3>
+                <h3 class="about__tag-text" data-i18n="about.tags.uxProductDesign">UX &amp; Product Design</h3>
               </li>
               <li class="about__tag tilt tilt--left">
                 <img
@@ -1116,7 +1258,7 @@ Z
                   decoding="async"
                   aria-hidden="true"
                 />
-                <h3 class="about__tag-text">Identity &amp; Branding</h3>
+                <h3 class="about__tag-text" data-i18n="about.tags.identityBranding">Identity &amp; Branding</h3>
               </li>
               <li class="about__tag tilt tilt--right">
                 <img
@@ -1128,7 +1270,7 @@ Z
                   decoding="async"
                   aria-hidden="true"
                 />
-                <h3 class="about__tag-text">Illustration</h3>
+                <h3 class="about__tag-text" data-i18n="about.tags.illustration">Illustration</h3>
               </li>
               <li class="about__tag tilt tilt--left">
                 <img
@@ -1140,7 +1282,7 @@ Z
                   decoding="async"
                   aria-hidden="true"
                 />
-                <h3 class="about__tag-text">Web Development</h3>
+                <h3 class="about__tag-text" data-i18n="about.tags.webDevelopment">Web Development</h3>
               </li>
               <li class="about__tag tilt tilt--right">
                 <img
@@ -1152,7 +1294,7 @@ Z
                   decoding="async"
                   aria-hidden="true"
                 />
-                <h3 class="about__tag-text">Shopify Integration</h3>
+                <h3 class="about__tag-text" data-i18n="about.tags.shopifyIntegration">Shopify Integration</h3>
               </li>
               <li class="about__tag tilt tilt--left">
                 <img
@@ -1164,7 +1306,7 @@ Z
                   decoding="async"
                   aria-hidden="true"
                 />
-                <h3 class="about__tag-text">Digital Solutions</h3>
+                <h3 class="about__tag-text" data-i18n="about.tags.digitalSolutions">Digital Solutions</h3>
               </li>
             </ul>
           </div>
@@ -1182,7 +1324,7 @@ Z
               fill="transparent"
             ></path>
             <text>
-              <textPath class="badge__text-path" href="#badge__svg">
+              <textPath class="badge__text-path" href="#badge__svg" data-i18n="about.badgeText">
                 – I AM AVAILABLE – FOR FREELANCE
               </textPath>
             </text>
@@ -1206,8 +1348,8 @@ Z
           decoding="async"
           aria-hidden="true"
         />
-        <h2 class="footer__title">Let’s talk about your project.</h2>
-        <p class="footer__description">
+        <h2 class="footer__title" data-i18n="footer.title">Let’s talk about your project.</h2>
+        <p class="footer__description" data-i18n="footer.description">
           Got a project in mind? Let’s create something great. We can transform
           that idea into real product.
         </p>
@@ -1215,12 +1357,13 @@ Z
           <a
             class="footer__button btn roll-link"
             href="mailto:hello@meeko.studio"
+            data-i18n-aria-label="common.getInTouch"
             aria-label="Get in Touch"
           >
             <span class="roll-link__mask" aria-hidden="true">
               <span class="roll-link__track">
-                <span class="roll-link__text">Get in Touch</span>
-                <span class="roll-link__text">Get in Touch</span>
+                <span class="roll-link__text" data-i18n="common.getInTouch">Get in Touch</span>
+                <span class="roll-link__text" data-i18n="common.getInTouch">Get in Touch</span>
               </span>
             </span>
           </a>
@@ -1234,11 +1377,11 @@ Z
             aria-hidden="true"
           />
           <div class="footer__note">
-            <p class="footer__note-text">and make it real together</p>
+            <p class="footer__note-text" data-i18n="footer.note">and make it real together</p>
           </div>
         </div>
         <div class="footer__bottom">
-          <p class="footer__copyright">
+          <p class="footer__copyright" data-i18n-html="footer.copyrightHtml">
             © Meeko by
             <a
               class="footer__source"
@@ -1248,9 +1391,9 @@ Z
             >elemis</a
             >. Powered by Framer.
           </p>
-          <nav class="footer__nav" aria-label="Footer links">
-            <a class="footer__nav-link" href="#works">Portfolio</a>
-            <a class="footer__nav-link" href="#about">About Me</a>
+          <nav class="footer__nav" data-i18n-aria-label="nav.footer" aria-label="Footer links">
+            <a class="footer__nav-link" href="#works" data-i18n="common.portfolio">Portfolio</a>
+            <a class="footer__nav-link" href="#about" data-i18n="common.aboutMe">About Me</a>
           </nav>
         </div>
       </div>

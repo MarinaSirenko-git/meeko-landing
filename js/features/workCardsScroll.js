@@ -1,4 +1,4 @@
-import { gsap } from "../lib/gsap.js";
+import { gsap, ScrollTrigger } from "../lib/gsap.js";
 import { prefersReducedMotion } from "../lib/motion.js";
 
 const getWorkElements = () => {
@@ -41,6 +41,15 @@ export function initWorkCardsScroll() {
 
     setInitialState();
 
+    const updateWrapperPointerEvents = () => {
+      const st = timeline?.scrollTrigger;
+      if (!st) return;
+
+      gsap.set(wrapper, {
+        pointerEvents: st.progress >= 1 ? "none" : "auto",
+      });
+    };
+
     const timeline = gsap.timeline({
       scrollTrigger: {
         trigger: targetCard,
@@ -51,7 +60,19 @@ export function initWorkCardsScroll() {
         pinSpacing: true,
         invalidateOnRefresh: true,
         onRefreshInit: setInitialState,
+        onUpdate: updateWrapperPointerEvents,
+        onLeave: () => {
+          gsap.set(wrapper, { pointerEvents: "none" });
+        },
+        onEnterBack: () => {
+          gsap.set(wrapper, { pointerEvents: "auto" });
+        },
       },
+    });
+
+    requestAnimationFrame(() => {
+      ScrollTrigger.refresh();
+      updateWrapperPointerEvents();
     });
 
     const getStackY = (stackIndex) => {
